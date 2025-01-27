@@ -1,0 +1,27 @@
+body {
+  background-image: url("../img/estrellitas.jpg");
+}
+
+.contenedorLogin {
+  background-color: #9BB3B8;
+  border-radius: 20px;
+  height: 500px;
+  width: 33%;
+  margin: 0 auto;
+  margin-top: 250px;
+}
+
+input {
+  background-color: #DDD7D7;
+}
+input::-moz-placeholder {
+  color: #000000;
+}
+input::placeholder {
+  color: #000000;
+}
+
+button {
+  background-color: #053D64;
+  color: #FFFFFF;
+}/*# sourceMappingURL=style.css.map */

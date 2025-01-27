@@ -1,0 +1,26 @@
+@import '../Comun/_variables.scss';
+
+body {
+    background-image: $imagenFondo;
+}
+
+.contenedorLogin {
+    background-color: $azulClaro;
+    border-radius: 20px;
+    height: 500px;
+    width: 33%;
+    margin: 0 auto;
+    margin-top: 250px;
+}
+
+input {
+    background-color: $grisClaro;
+    &::placeholder{
+        color: $negro;
+    }
+}
+
+button {
+    background-color: $azulOscuroBoton;
+    color: $blanco
+}
