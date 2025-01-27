@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seguimiento del Cursor con Estrellas</title>
+  <!-- Importar Materialize CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden; /* Evitar scroll por las estrellas */
+    }
+    .star {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: linear-gradient(45deg, aquamarine, blue);
+      clip-path: polygon(
+        50% 0%, 
+        61% 35%, 
+        98% 35%, 
+        68% 57%, 
+        79% 91%, 
+        50% 70%, 
+        21% 91%, 
+        32% 57%, 
+        2% 35%, 
+        39% 35%
+      ); /* Forma de estrella */
+      pointer-events: none; /* Evitar interferencia con clics */
+      animation: fade 1s linear forwards, twinkle 1s ease-in-out infinite;
+    }
+
+    @keyframes fade {
+      0% {
+        opacity: 1;
+        transform: scale(1);
+      }
+      100% {
+        opacity: 0;
+        transform: scale(0.5);
+      }
+    }
+
+    @keyframes twinkle {
+      50% {
+        transform: scale(1.2);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Contenido adicional con Materialize si lo deseas -->
+  <div class="container center-align">
+    <h3>¡Mueve el ratón para ver las estrellas!</h3>
+  </div>
+
+  <!-- Script personalizado -->
+  <script>
+    // Función que crea una estrella en la posición del ratón
+    function createStar(x, y) {
+      const star = document.createElement('div');
+      star.className = 'star';
+
+      // Colocar la estrella en la posición del cursor
+      star.style.left = `${x}px`;
+      star.style.top = `${y}px`;
+
+      // Añadir la estrella al cuerpo
+      document.body.appendChild(star);
+
+      // Eliminar la estrella después de la animación
+      setTimeout(() => {
+        star.remove();
+      }, 1000); // La duración coincide con la animación `fade`
+    }
+
+    // Evento que rastrea el movimiento del ratón
+    document.addEventListener('mousemove', (e) => {
+      createStar(e.clientX, e.clientY); // Crear estrella donde está el cursor
+    });
+  </script>
+
+  <!-- Importar Materialize JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>
