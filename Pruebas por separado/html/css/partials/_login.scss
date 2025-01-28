@@ -2,6 +2,8 @@
 
 body {
     background-image: $imagenFondo;
+    background-repeat: no-repeat; // Así haces que la imagen no se repita
+    background-size: cover; // Al usar el no repeat se queda muy pequeña, con esta propiedad la ajustas al tamaño de la pantalla
 }
 
 .contenedorLogin {
@@ -15,12 +17,66 @@ body {
 
 input {
     background-color: $grisClaro;
+    border-radius: 5px;
     &::placeholder{
+        font-family: $kalam;
         color: $negro;
     }
 }
 
 button {
     background-color: $azulOscuroBoton;
-    color: $blanco
+    color: $blanco;
+    border-radius: 20px;
+    font-family: $kalam;
+}
+
+.luna{
+    width: 40px;
+    height: 40px;
+    background-image: $imagenLuna;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    background-image: $imagenLogo;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+}
+
+/*div {
+    .divSuperiorFormularioLogin {
+        display: inline-block;
+    }
+}
+*/
+
+/*
+.divSuperiorFormularioLogin {
+    display: inline-block;
+}
+*/
+
+// Preguntar a Pedro, no se pone en una línea
+
+
+// Posible solución, hacer un grid en ese div, no me termina de convencer
+
+.divSuperiorFormularioLogin {
+    display: grid;
+    grid-template-columns: auto auto; /* Columnas ajustadas automáticamente al contenido */
+    grid-template-rows: 1fr;
+    align-items: center;
+    gap: 20px;
+    padding: 5px;
+    margin: 0 auto; /* Centra horizontalmente el contenedor en la página */
+    width: fit-content; /* Ajusta el ancho al contenido, en mi ordenador con un 55% se ve bien */
+    h3 {
+        font-family: $kalam;
+    }
 }

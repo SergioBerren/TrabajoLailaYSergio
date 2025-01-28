@@ -1,0 +1,63 @@
+@import '../Comun/_variables.scss';
+
+header, footer{
+    background-color: $azulClaro;
+}
+
+.menuLateral, .aula {
+    background-color: $verdeClaro;
+}
+
+.contenedorInicio {
+    display: flex;
+    justify-content: flex-start;
+}
+  
+.menuLateral, .aula {
+    display: inline-block;
+    vertical-align: top;
+}
+  
+.menuLateral {
+    width: 10%;
+    padding: 20px;
+}
+
+.divAsignaturas {
+    width: 90%;
+}
+  
+.aula {
+    width: 97.5%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 20px;
+}
+  
+// En vez de flex podemos hacer un grid, pero quí me quise complicar un poco la vida
+
+.aula div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+  
+.aula img {
+    max-width: 100px;
+    margin-bottom: 10px;
+}
+  
+ .aula p {
+    color: $negro;
+    font-size: 14px;
+    font-family: $kalam;
+    margin: 0;
+}
+
+footer {
+    position: absolute;
+    width: 100%;
+}  
