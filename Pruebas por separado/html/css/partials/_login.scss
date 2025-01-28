@@ -65,7 +65,7 @@ button {
 // Preguntar a Pedro, no se pone en una línea
 
 
-// Posible solución, hacer un grid en ese div, no me termina de convencer
+// Posible solución, hacer un grid en ese div, no me termina de convencer, aunque queda bien
 
 .divSuperiorFormularioLogin {
     display: grid;
@@ -78,5 +78,14 @@ button {
     width: fit-content; /* Ajusta el ancho al contenido, en mi ordenador con un 55% se ve bien */
     h3 {
         font-family: $kalam;
+    }
+}
+
+button {
+    .luna{
+        display: inline-block;
+    }
+    .accederBtn{
+        display: inline-block;
     }
 }

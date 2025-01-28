@@ -76,4 +76,11 @@ button {
 }
 .divSuperiorFormularioLogin h3 {
   font-family: "Kalam";
+}
+
+button .luna {
+  display: inline-block;
+}
+button .accederBtn {
+  display: inline-block;
 }/*# sourceMappingURL=style.css.map */
