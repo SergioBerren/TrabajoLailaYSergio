@@ -2,6 +2,7 @@
 
 header, footer{
     background-color: $azulClaro;
+    color: $negro;
 }
 
 .menuLateral, .aula {
@@ -54,4 +55,22 @@ header, footer{
     font-size: 14px;
     font-family: $kalam;
     margin: 0;
+}
+
+.footer {
+    text-align: center;
+    padding: 1rem 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10; // Asegura que el footer quede sobre otros elementos
+
+    p{
+        margin: 0;
+        display: inline-block;
+    }
+    img{
+        display: inline-block;
+    }
 }
