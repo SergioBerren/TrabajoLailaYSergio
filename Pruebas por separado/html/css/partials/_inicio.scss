@@ -28,7 +28,6 @@ header, footer{
 }
   
 .aula {
-    width: 97.5%;
     padding: 20px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -56,8 +55,3 @@ header, footer{
     font-family: $kalam;
     margin: 0;
 }
-
-footer {
-    position: absolute;
-    width: 100%;
-}  
