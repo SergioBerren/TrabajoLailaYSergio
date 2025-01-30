@@ -1,42 +1,39 @@
 @import '../Comun/_variables.scss';
 
-header, footer{
-    background-color: $azulClaro;
-    color: $negro;
-}
-
-.menuLateral, .aula {
-    background-color: $verdeClaro;
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 .contenedorInicio {
     display: flex;
-    justify-content: flex-start;
+    flex-grow: 1; // Ocupa todo el espacio disponible
+    height: calc(100vh - 50px); // Ajusta según la altura del footer
 }
-  
-.menuLateral, .aula {
-    display: inline-block;
-    vertical-align: top;
-}
-  
+
 .menuLateral {
     width: 10%;
     padding: 20px;
+    background-color: $verdeClaro;
 }
 
 .divAsignaturas {
-    width: 90%;
+    flex-grow: 1; // Permite que crezca y llene el espacio
+    display: flex;
+    flex-direction: column;
 }
-  
+
 .aula {
+    flex-grow: 1;
     padding: 20px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, auto);
     gap: 20px;
+    background-color: $verdeClaro;
 }
-  
-// En vez de flex podemos hacer un grid, pero quí me quise complicar un poco la vida
 
 .aula div {
     display: flex;
@@ -44,33 +41,15 @@ header, footer{
     align-items: center;
     text-align: center;
 }
-  
+
 .aula img {
     max-width: 100px;
     margin-bottom: 10px;
 }
-  
- .aula p {
+
+.aula p {
     color: $negro;
     font-size: 14px;
     font-family: $kalam;
     margin: 0;
-}
-
-.footer {
-    text-align: center;
-    padding: 1rem 0;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    z-index: 10; // Asegura que el footer quede sobre otros elementos
-
-    p{
-        margin: 0;
-        display: inline-block;
-    }
-    img{
-        display: inline-block;
-    }
 }

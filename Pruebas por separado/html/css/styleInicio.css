@@ -1,37 +1,48 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
 header, footer {
   background-color: #9BB3B8;
   color: #000000;
 }
 
-.menuLateral, .aula {
-  background-color: #A8C3A5;
+.cabecera {
+  display: inline-block;
+}
+.cabecera img, .cabecera p, .cabecera h1 {
+  display: inline-block;
 }
 
 .contenedorInicio {
   display: flex;
-  justify-content: flex-start;
-}
-
-.menuLateral, .aula {
-  display: inline-block;
-  vertical-align: top;
+  flex-grow: 1;
+  height: calc(100vh - 50px);
 }
 
 .menuLateral {
   width: 10%;
   padding: 20px;
+  background-color: #A8C3A5;
 }
 
 .divAsignaturas {
-  width: 90%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .aula {
+  flex-grow: 1;
   padding: 20px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, auto);
   gap: 20px;
+  background-color: #A8C3A5;
 }
 
 .aula div {
@@ -54,8 +65,10 @@ header, footer {
 }
 
 .footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   text-align: center;
-  padding: 1rem 0;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -64,8 +77,13 @@ header, footer {
 }
 .footer p {
   margin: 0;
-  display: inline-block;
+  padding: 1rem;
 }
-.footer img {
-  display: inline-block;
+.footer .logoFooter {
+  width: 60px;
+  height: 60px;
+  background-image: url("../img/logoFooter.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
 }/*# sourceMappingURL=styleInicio.css.map */

@@ -1,0 +1,11 @@
+header {
+    background-color: $azulClaro;
+    color: $negro;
+}
+
+.cabecera {
+    display: inline-block;
+    div, p, h1 {
+        display: inline-block;
+    }
+}

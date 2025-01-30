@@ -1,0 +1,26 @@
+footer {
+    display: flex;
+    justify-content: space-between; // Distribuye los elementos a los extremos
+    align-items: center; // Alinea verticalmente
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    background-color: $azulClaro;
+    color: $negro;
+    p {
+        margin: 0;
+        padding: 1rem;
+    }
+
+    .logoFooter {
+        width: 60px;
+        height: 60px;
+        background-image: $imagenLogoFooter;
+        background-size: cover;
+        background-position: center;
+        border-radius: 50%;
+    }
+}
