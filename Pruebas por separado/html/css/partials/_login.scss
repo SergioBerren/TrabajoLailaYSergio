@@ -4,20 +4,46 @@ body {
     background-image: $imagenFondo;
     background-repeat: no-repeat; // Así haces que la imagen no se repita
     background-size: cover; // Al usar el no repeat se queda muy pequeña, con esta propiedad la ajustas al tamaño de la pantalla
+    //leila
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
 }
 
 .contenedorLogin {
     background-color: $azulClaro;
     border-radius: 20px;
+    //modificacion leila 
+    width: 90%;
+    max-width: 400px;
+    padding: 20px;
+    @media (min-width: 768px) {
+        width: 33%;
+        height: auto;
+        padding: 30px;
+    }
+    /*
     height: 500px;
     width: 33%;
     margin: 0 auto;
     margin-top: 250px;
+    */
 }
 
 input {
     background-color: $grisClaro;
-    border-radius: 5px;
+    border-radius: 15px;
+    //leila
+    border: none;
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-family: $kalam;
+    color: $negro;
+
     &::placeholder{
         font-family: $kalam;
         color: $negro;
@@ -25,10 +51,26 @@ input {
 }
 
 button {
+    //leila
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     background-color: $azulOscuroBoton;
     color: $blanco;
     border-radius: 20px;
     font-family: $kalam;
+    //leila
+    padding: 10px;
+    width: 70%;
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1rem;
+    &:hover {
+        background-color: darken($azulOscuroBoton, 10%);
+    }
+
 }
 
 .luna{
@@ -38,6 +80,8 @@ button {
     background-size: cover;
     background-position: center;
     border-radius: 50%;
+    //leila
+    margin-right: 10px;
 }
 
 .logo {
@@ -47,6 +91,7 @@ button {
     background-size: cover;
     background-position: center;
     border-radius: 50%;
+    margin: 0 auto;
 }
 
 /*div {
@@ -69,16 +114,25 @@ button {
 
 .divSuperiorFormularioLogin {
     display: grid;
-    grid-template-columns: auto auto; /* Columnas ajustadas automáticamente al contenido */
-    grid-template-rows: 1fr;
+    grid-template-columns: auto; /* Columnas ajustadas automáticamente al contenido */
+    grid-template-rows: auto auto;
     align-items: center;
     gap: 20px;
-    padding: 5px;
-    margin: 0 auto; /* Centra horizontalmente el contenedor en la página */
-    width: fit-content; /* Ajusta el ancho al contenido, en mi ordenador con un 55% se ve bien */
+    //leila
     h3 {
         font-family: $kalam;
+        font-size: 1.2rem;
+        color: $azulOscuroBoton;
+        text-align: center;
+        margin-top: 10px;
     }
+    /*
+    padding: 5px;
+    margin: 0 auto; /* Centra horizontalmente el contenedor en la página 
+    width: fit-content;  Ajusta el ancho al contenido, en mi ordenador con un 55% se ve bien 
+    h3 {
+        font-family: $kalam;
+    }*/
 }
 
 button {
@@ -87,5 +141,42 @@ button {
     }
     .accederBtn{
         display: inline-block;
+    }
+}
+//leila
+@media (max-width: 480px) {
+    .contenedorLogin {
+        padding: 15px;
+        border-radius: 15px;
+    }
+
+    input {
+        padding: 8px;
+        width: calc(100% - 30px);
+        margin: 10px 15px;
+    }
+
+    button {
+        padding: 8px;
+        font-size: 0.9rem;
+        max-width: 180px;
+
+        .luna {
+            width: 18px;
+            height: 18px;
+        }
+    }
+
+    .logo {
+        width: 50px;
+        height: 50px;
+    }
+
+    .divSuperiorFormularioLogin {
+        grid-template-rows: auto auto;
+
+        h3 {
+            font-size: 1rem;
+        }
     }
 }
