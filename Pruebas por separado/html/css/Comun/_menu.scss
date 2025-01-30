@@ -5,6 +5,10 @@ header {
     color: $negro;
 }
 
+a {
+    text-decoration: none;
+}
+
 .cabecera {
     display: inline-block;
     div, p, h1 {

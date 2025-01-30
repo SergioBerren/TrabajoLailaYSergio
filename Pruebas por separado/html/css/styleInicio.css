@@ -3,6 +3,10 @@ header {
   color: #000000;
 }
 
+a {
+  text-decoration: none;
+}
+
 .cabecera {
   display: inline-block;
 }
