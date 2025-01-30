@@ -1,11 +1,4 @@
-html, body {
-  height: 100%;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-}
-
-header, footer {
+header {
   background-color: #9BB3B8;
   color: #000000;
 }
@@ -13,8 +6,33 @@ header, footer {
 .cabecera {
   display: inline-block;
 }
-.cabecera img, .cabecera p, .cabecera h1 {
+.cabecera div, .cabecera p, .cabecera h1 {
   display: inline-block;
+}
+
+.fotoPerfil {
+  background-image: url("../img/fotoPerfil.jpg");
+  width: 60px;
+  height: 60px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+}
+
+.logo {
+  background-image: url("../img/logoTrabajoDIW.jpg");
+  width: 60px;
+  height: 60px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .contenedorInicio {
@@ -64,7 +82,7 @@ header, footer {
   margin: 0;
 }
 
-.footer {
+footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -74,12 +92,14 @@ header, footer {
   left: 0;
   width: 100%;
   z-index: 10;
+  background-color: #9BB3B8;
+  color: #000000;
 }
-.footer p {
+footer p {
   margin: 0;
   padding: 1rem;
 }
-.footer .logoFooter {
+footer .logoFooter {
   width: 60px;
   height: 60px;
   background-image: url("../img/logoFooter.jpg");
