@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astrofisica-Pagina inicial</title>
+    <link rel="stylesheet" href="css/styleInicio.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <style>
+        .calendario {
+            margin-top: 20px;
+        }
+        .calendario table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .calendario th, .calendario td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ccc;
+        }
+        .calendario th {
+            background-color: #2e1fba;
+            color: white;
+        }
+        .hoy {
+            background-color: #2a9d8f;
+            color: white;
+            font-weight: bold;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="cabecera">
+            <img src="" alt="Logo IES Laila y Sergio">
+            <h1>IES Laila y Sergio</h1>
+        </div>
+        <div>
+            <p>Mi Nombre</p>
+            <img src="" alt="Foto de perfil">
+        </div>
+    </header>
+
+    <div class="contenedorAsignatura">
+        <div class="columna-principal">
+            <div class="titulo">
+                <h3>Astrofísica</h3>
+            </div>
+
+            <!-- Video Inicial -->
+            <div class="videoInicial">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/vFMpc3nmCRQ?si=qRiapofY1hPiFTFV"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <!-- PDF Link 1 -->
+            <div class="Link1">
+                <div class="tarjeta">
+                    <div class="contenido-tarjeta">
+                        <span class="titulo-tarjeta">PDF dado en la primera clase</span>
+                        <button> Hecho</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Enlace de Video -->
+            <div class="enlaceVideo">
+                <div class="tarjeta">
+                    <div class="contenido-tarjeta">
+                        <span class="titulo-tarjeta">Video</span>
+                        <a href="https://www.youtube.com/watch?si=lrRtfboZLMDb3Lh5&v=MiIBM1uFSxg&feature=youtu.be"
+                            target="_blank" class="btn-pequeño">Ver video</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tema 1 -->
+            <div class="tema1">
+                <h5>Tema 1</h5>
+
+                <!-- PDF Link 2 -->
+                <div class="tarjeta">
+                    <div class="contenido-tarjeta">
+                        <span class="titulo-tarjeta">Ejercicios (Temas 1-2-3-4)</span>
+                        <a href="/Pruebas por separado/html/wuolah-free-Entregable-1.pdf" class="btn-pequeño">Descargar
+                            PDF</a>
+                    </div>
+                </div>
+
+                <!-- Formulario Autoevaluación -->
+                <div class="tarjeta">
+                    <div class="contenido-tarjeta">
+                        <span class="titulo-tarjeta">Formulario Autoevaluación del curso</span>
+                        <button> Hecho</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Calendario -->
+            <div class="container ">
+                <h3 class="center-align">Calendario Interactivo</h3>
+
+                <div class="row">
+                    <div class="input-field col s6">
+                        <select id="mes"></select>
+                        <label>Selecciona un mes</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <select id="anio"></select>
+                        <label>Selecciona un año</label>
+                    </div>
+                </div>
+
+                <div class="calendario">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Lun</th>
+                                <th>Mar</th>
+                                <th>Mié</th>
+                                <th>Jue</th>
+                                <th>Vie</th>
+                                <th>Sáb</th>
+                                <th>Dom</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabla-calendario"></tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <p>IES Laila y Sergio - Comunidad de Madrid</p>
+        <img src="" alt="Logo del pie de página">
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Inicializa los selects de Materialize
+            var selects = document.querySelectorAll('select');
+            M.FormSelect.init(selects);
+
+            // Nombres de los meses en español
+            const meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
+            // Selección de mes y año
+            const mesSelect = document.getElementById('mes');
+            const anioSelect = document.getElementById('anio');
+            // Agrega los meses al select
+            meses.forEach((mes, index) => {
+                let option = document.createElement('option');
+                option.value = index;
+                option.textContent = mes;
+                mesSelect.appendChild(option);
+            });
+            // Agrega los años al select (Desde 2000 hasta 2050)
+            for (let i = 2000; i <= 2050; i++) {
+                let option = document.createElement('option');
+                option.value = i;
+                option.textContent = i;
+                anioSelect.appendChild(option);
+            }
+            // Selecciona el mes y año actual
+            const fechaActual = new Date();
+            mesSelect.value = fechaActual.getMonth();
+            anioSelect.value = fechaActual.getFullYear();
+            // Vuelve a inicializar los selects de Materialize
+            M.FormSelect.init(selects);
+            // Función para generar el calendario
+            function generarCalendario(mes, anio) {
+                const tabla = document.getElementById('tabla-calendario');
+                tabla.innerHTML = ''; // Limpia la tabla
+                const primerDia = new Date(anio, mes, 1).getDay(); // Día de la semana del primer día
+                const ultimoDia = new Date(anio, mes + 1, 0).getDate(); // Último día del mes
+                let diaActual = 1;
+                for (let i = 0; i < 6; i++) { // Hasta 6 filas máximo
+                    let fila = document.createElement('tr');
+                    for (let j = 0; j < 7; j++) {
+                        let celda = document.createElement('td');
+                        if (i === 0 && j < (primerDia === 0 ? 6 : primerDia - 1)) {
+                            celda.textContent = ''; // Espacios vacíos
+                        } else if (diaActual > ultimoDia) {
+                            break; // Si ya pasamos el último día, terminamos
+                        } else {
+                            celda.textContent = diaActual;
+                            // Resalta el día actual
+                            if (diaActual === fechaActual.getDate() && mes === fechaActual.getMonth() && anio === fechaActual.getFullYear()) {
+                                celda.classList.add('hoy');
+                            }
+                            diaActual++;
+                        }
+                        fila.appendChild(celda);
+                    }
+                    tabla.appendChild(fila);
+                }
+            }
+            // Genera el calendario inicial
+            generarCalendario(fechaActual.getMonth(), fechaActual.getFullYear());
+
+            // Cambia el calendario al seleccionar mes o año
+            mesSelect.addEventListener('change', () => {
+                generarCalendario(parseInt(mesSelect.value), parseInt(anioSelect.value));
+            });
+            anioSelect.addEventListener('change', () => {
+                generarCalendario(parseInt(mesSelect.value), parseInt(anioSelect.value));
+            });
+        });
+    </script>
+
+</body>
+
+</html>
