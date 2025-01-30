@@ -1,0 +1,59 @@
+header {
+  background-color: #9BB3B8;
+  color: #000000;
+}
+
+a {
+  text-decoration: none;
+}
+
+.cabecera {
+  display: inline-block;
+}
+.cabecera div, .cabecera p, .cabecera h1 {
+  display: inline-block;
+}
+
+.fotoPerfil {
+  background-image: url("../img/fotoPerfil.jpg");
+  width: 60px;
+  height: 60px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+}
+
+.logo {
+  background-image: url("../img/logoTrabajoDIW.jpg");
+  width: 60px;
+  height: 60px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  background-color: #9BB3B8;
+  color: #000000;
+}
+footer p {
+  margin: 0;
+  padding: 1rem;
+}
+footer .logoFooter {
+  width: 60px;
+  height: 60px;
+  background-image: url("../img/logoFooter.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+}/*# sourceMappingURL=styleAsignatura.css.map */
