@@ -2,8 +2,10 @@
 
 footer {
     display: flex;
-    justify-content: space-between; // Distribuye los elementos a los extremos
-    align-items: center; // Alinea verticalmente
+    // Distribuye los elementos a los extremos
+    justify-content: center; 
+    // Alinea verticalmente
+    align-items: center; 
     text-align: center;
     position: fixed;
     bottom: 0;
@@ -12,14 +14,22 @@ footer {
     z-index: 10;
     background-color: $azulClaro;
     color: $negro;
+    padding: 0.5rem; // Reduce el espacio interior
+    .footerContent {
+        display: flex;
+        align-items: center; // Alinea texto y logo
+        gap: 0.5rem; // Reduce la separación entre ellos
+    }
+
     p {
         margin: 0;
-        padding: 1rem;
+        padding: 0.5rem;
     }
 
     .logoFooter {
-        width: 60px;
-        height: 60px;
+        margin-left: 400px;
+        width: 50px;
+        height: 50px;
         background-image: $imagenLogoFooter;
         background-size: cover;
         background-position: center;
