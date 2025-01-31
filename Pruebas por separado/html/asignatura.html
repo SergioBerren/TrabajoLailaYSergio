@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,41 +7,17 @@
     <link rel="stylesheet" href="css/styleAsignatura.css">
     <link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <style>
-        .calendario {
-            margin-top: 20px;
-        }
-        .calendario table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        .calendario th, .calendario td {
-            padding: 10px;
-            text-align: center;
-            border: 1px solid #ccc;
-        }
-        .calendario th {
-            background-color: #2e1fba;
-            color: white;
-        }
-        .hoy {
-            background-color: #2a9d8f;
-            color: white;
-            font-weight: bold;
-            border-radius: 50%;
-        }
-    </style>
 </head>
 
 <body>
     <header>
-        <div class="cabecera">
-            <img src="" alt="Logo IES Laila y Sergio">
-            <h1>IES Laila y Sergio</h1>
+        <div class="cabecera izquierda">
+            <div class="logo"></div>
+            <h1 class="h1Header">IES Laila y Sergio</h1>
         </div>
-        <div>
-            <p>Mi Nombre</p>
-            <img src="" alt="Foto de perfil">
+        <div class="cabecera derecha">
+            <p class="pHeader">Mi Nombre</p>
+            <div class="fotoPerfil"></div>
         </div>
     </header>
 
@@ -134,87 +109,12 @@
                         <tbody id="tabla-calendario"></tbody>
                     </table>
                 </div>
-
             </div>
         </div>
     </div>
     <footer class="footer">
         <p>IES Laila y Sergio - Comunidad de Madrid</p>
-        <img src="" alt="Logo del pie de página">
+        <div class="logoFooter"></div>
     </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" defer></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Inicializa los selects de Materialize
-            var selects = document.querySelectorAll('select');
-            M.FormSelect.init(selects);
-
-            // Nombres de los meses en español
-            const meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
-            // Selección de mes y año
-            const mesSelect = document.getElementById('mes');
-            const anioSelect = document.getElementById('anio');
-            // Agrega los meses al select
-            meses.forEach((mes, index) => {
-                let option = document.createElement('option');
-                option.value = index;
-                option.textContent = mes;
-                mesSelect.appendChild(option);
-            });
-            // Agrega los años al select (Desde 2000 hasta 2050)
-            for (let i = 2000; i <= 2050; i++) {
-                let option = document.createElement('option');
-                option.value = i;
-                option.textContent = i;
-                anioSelect.appendChild(option);
-            }
-            // Selecciona el mes y año actual
-            const fechaActual = new Date();
-            mesSelect.value = fechaActual.getMonth();
-            anioSelect.value = fechaActual.getFullYear();
-            // Vuelve a inicializar los selects de Materialize
-            M.FormSelect.init(selects);
-            // Función para generar el calendario
-            function generarCalendario(mes, anio) {
-                const tabla = document.getElementById('tabla-calendario');
-                tabla.innerHTML = ''; // Limpia la tabla
-                const primerDia = new Date(anio, mes, 1).getDay(); // Día de la semana del primer día
-                const ultimoDia = new Date(anio, mes + 1, 0).getDate(); // Último día del mes
-                let diaActual = 1;
-                for (let i = 0; i < 6; i++) { // Hasta 6 filas máximo
-                    let fila = document.createElement('tr');
-                    for (let j = 0; j < 7; j++) {
-                        let celda = document.createElement('td');
-                        if (i === 0 && j < (primerDia === 0 ? 6 : primerDia - 1)) {
-                            celda.textContent = ''; // Espacios vacíos
-                        } else if (diaActual > ultimoDia) {
-                            break; // Si ya pasamos el último día, terminamos
-                        } else {
-                            celda.textContent = diaActual;
-                            // Resalta el día actual
-                            if (diaActual === fechaActual.getDate() && mes === fechaActual.getMonth() && anio === fechaActual.getFullYear()) {
-                                celda.classList.add('hoy');
-                            }
-                            diaActual++;
-                        }
-                        fila.appendChild(celda);
-                    }
-                    tabla.appendChild(fila);
-                }
-            }
-            // Genera el calendario inicial
-            generarCalendario(fechaActual.getMonth(), fechaActual.getFullYear());
-
-            // Cambia el calendario al seleccionar mes o año
-            mesSelect.addEventListener('change', () => {
-                generarCalendario(parseInt(mesSelect.value), parseInt(anioSelect.value));
-            });
-            anioSelect.addEventListener('change', () => {
-                generarCalendario(parseInt(mesSelect.value), parseInt(anioSelect.value));
-            });
-        });
-    </script>
-
 </body>
-
 </html>

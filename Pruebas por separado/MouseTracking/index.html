@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,13 +9,13 @@
   <style>
     body {
       margin: 0;
-      overflow: hidden; /* Evitar scroll por las estrellas */
+      overflow: hidden; /* Evitar el desplazamiento por las estrellas */
     }
-    .star {
+    .estrella {
       position: absolute;
       width: 20px;
       height: 20px;
-      background: linear-gradient(45deg, aquamarine, blue);
+      background: linear-gradient(45deg, aquamarina, azul);
       clip-path: polygon(
         50% 0%, 
         61% 35%, 
@@ -29,10 +29,10 @@
         39% 35%
       ); /* Forma de estrella */
       pointer-events: none; /* Evitar interferencia con clics */
-      animation: fade 1s linear forwards, twinkle 1s ease-in-out infinite;
+      animation: desvanecer 1s linear forwards, centelleo 1s ease-in-out infinite;
     }
 
-    @keyframes fade {
+    @keyframes desvanecer {
       0% {
         opacity: 1;
         transform: scale(1);
@@ -43,7 +43,7 @@
       }
     }
 
-    @keyframes twinkle {
+    @keyframes centelleo {
       50% {
         transform: scale(1.2);
       }
@@ -60,26 +60,26 @@
   <!-- Script personalizado -->
   <script>
     // Función que crea una estrella en la posición del ratón
-    function createStar(x, y) {
-      const star = document.createElement('div');
-      star.className = 'star';
+    function crearEstrella(x, y) {
+      const estrella = document.createElement('div');
+      estrella.className = 'estrella';
 
       // Colocar la estrella en la posición del cursor
-      star.style.left = `${x}px`;
-      star.style.top = `${y}px`;
+      estrella.style.left = `${x}px`;
+      estrella.style.top = `${y}px`;
 
       // Añadir la estrella al cuerpo
-      document.body.appendChild(star);
+      document.body.appendChild(estrella);
 
       // Eliminar la estrella después de la animación
       setTimeout(() => {
-        star.remove();
-      }, 1000); // La duración coincide con la animación `fade`
+        estrella.remove();
+      }, 1000); // La duración coincide con la animación `desvanecer`
     }
 
     // Evento que rastrea el movimiento del ratón
     document.addEventListener('mousemove', (e) => {
-      createStar(e.clientX, e.clientY); // Crear estrella donde está el cursor
+      crearEstrella(e.clientX, e.clientY); // Crear estrella donde está el cursor
     });
   </script>
 
