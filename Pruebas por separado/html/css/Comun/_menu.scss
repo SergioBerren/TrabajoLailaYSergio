@@ -2,36 +2,44 @@
 
 header {
     background-color: $azulClaro;
-    padding: 1rem; // Agregar espacio para que no quede pegado
+    padding: 1rem;
     color: $negro;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
 
 a {
     text-decoration: none;
+    color: inherit;
 }
 
-.h1Header, .pHeader{
+.h1Header, .pHeader {
     font-family: $kalam;
 }
 
 .cabecera {
     display: flex;
     align-items: center;
-    justify-content: space-between; // Distribuye elementos de forma responsive
-    width: 100%;
-    padding: 0 1rem;
-    /*
-    display: inline-block;
-    div, p, h1 {
-        display: inline-block;
-    }*/
 }
 
+.cabecera_izquierda {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.cabecera_derecha {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
 
 .fotoPerfil {
     background-image: $imagenFotoPerfil;
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 80px;
     background-size: cover;
     background-position: center;
     border-radius: 50%;
@@ -39,28 +47,39 @@ a {
 
 .logo {
     background-image: $imagenLogo;
-    margin-right: 200px;
-    margin-left: 20px;
     width: 60px;
     height: 60px;
     background-size: cover;
     background-position: center;
     border-radius: 50%;
 }
+
 @media (max-width: 768px) {
     header {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
+        justify-content: space-between;
         gap: 1rem; // Espaciado entre elementos
+        flex-wrap: nowrap;
+    }
+    .cabecera {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        flex-wrap: nowrap;
     }
 
-    .titulo {
-        text-align: center;
-        font-size: 1.2rem;
+
+    .cabecera_izquierda, .cabecera_derecha {
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+        flex-wrap: nowrap;
     }
 
     .fotoPerfil {
-        width: 40px;
-        height: 40px;
+        width: 80px;
+        height: 80px;
     }
 }

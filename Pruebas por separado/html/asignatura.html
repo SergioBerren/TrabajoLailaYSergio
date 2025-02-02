@@ -6,7 +6,8 @@
     <title>Astrofisica-Pagina inicial</title>
     <link rel="stylesheet" href="css/styleAsignatura.css">
     <link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!--  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
+   
 </head>
 
 <body>
@@ -81,33 +82,13 @@
             <!-- Calendario -->
             <div class="container ">
                 <h3 class="center-align">Calendario Interactivo</h3>
-
-                <div class="row">
-                    <div class="input-field col s6">
-                        <select id="mes"></select>
-                        <label>Selecciona un mes</label>
-                    </div>
-                    <div class="input-field col s6">
-                        <select id="anio"></select>
-                        <label>Selecciona un año</label>
-                    </div>
-                </div>
-
                 <div class="calendario">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Lun</th>
-                                <th>Mar</th>
-                                <th>Mié</th>
-                                <th>Jue</th>
-                                <th>Vie</th>
-                                <th>Sáb</th>
-                                <th>Dom</th>
-                            </tr>
-                        </thead>
-                        <tbody id="tabla-calendario"></tbody>
-                    </table>
+                    <iframe src="https://www.google.com/calendar/embed?src=your-calendar-id&ctz=America%2FNew_York" 
+                    width="800" 
+                    height="600" 
+                    frameborder="0" 
+                    scrolling="no">
+            </iframe>
                 </div>
             </div>
         </div>

@@ -1,3 +1,71 @@
 @import '../css/Comun/_menu.scss';
 @import '../css/partials/_inicio.scss';
 @import '../css/Comun/_footer.scss';
+
+//para el contenedor
+.contenedorInicio {
+    width: 100%;
+    background-image: $imagenFondo;
+    background-size: cover;
+    padding: 20px;
+    font-family: $kalam, cursive;
+
+    //menu lateral
+    .menuLateral {
+        width: 20%;
+        background-color: $azulClaro;
+        padding: 15px;
+        border-radius: 8px;
+        margin-right: 20px;
+
+        h3 {
+            color: $azulOscuroModoNoche;
+            margin-bottom: 15px;
+        }
+        .noticia {
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+    }
+
+    //del div de asignaturas
+    .divAsignaturas {
+        width: 80%;
+        background-color: $verdeClaro;
+        padding: 20px;
+        border-radius: 8px;
+        h2 {
+            color: $azulOscuroModoNoche;
+            margin-bottom: 20px;
+        }
+        .aula {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 15px;
+
+            a {
+                text-decoration: none;
+                color: $negro;
+
+                div {
+                    background-color: $blanco;
+                    padding: 10px;
+                    border-radius: 8px;
+                    text-align: center;
+                    img {
+                        width: 100%;
+                        height: auto;
+                        border-radius: 10px;
+                    }
+
+                    p {
+                        margin-top: 10px;
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
