@@ -1,0 +1,130 @@
+body {
+  background-image: url("../img/estrellitas.jpg");
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.contenedorLogin {
+  background-color: #9BB3B8;
+  border-radius: 20px;
+  padding: 20px;
+  max-width: 400px;
+}
+@media (min-width: 768px) {
+  .contenedorLogin {
+    width: 33%;
+  }
+}
+
+.input-field input {
+  background-color: #DDD7D7;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+.waves-effect.btn {
+  background-color: #053D64;
+  border-radius: 20px;
+  font-family: "Kalam";
+  margin-right: auto;
+  margin-left: auto;
+  padding: 10px;
+  width: 70%;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.waves-effect.btn:hover {
+  background-color: #031f33;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  background-image: url("../img/logoTrabajoDIW.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.luna {
+  width: 25px;
+  height: 25px;
+  background-image: url("../img/luna.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+}
+
+@media (max-width: 480px) {
+  .contenedorLogin {
+    padding: 15px;
+    border-radius: 15px;
+  }
+  .input-field input {
+    padding: 8px;
+  }
+  .waves-effect.btn {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+  .logo {
+    width: 50px;
+    height: 50px;
+  }
+  .luna {
+    width: 20px;
+    height: 20px;
+  }
+}
+.card-panel {
+  border-radius: 20px;
+  background-color: #9BB3B8;
+}
+
+.input-field {
+  background-color: #DDD7D7;
+  border-radius: 15px;
+  font-family: "Kalam";
+}
+
+.input-field input::-moz-placeholder {
+  font-family: "Kalam";
+  color: #000000;
+  opacity: 0.7;
+}
+
+.input-field input::placeholder {
+  font-family: "Kalam";
+  color: #000000;
+  opacity: 0.7;
+}
+
+input:not([type]), input[type=text]:not(.browser-default), input[type=password]:not(.browser-default), input[type=email]:not(.browser-default), input[type=url]:not(.browser-default), input[type=time]:not(.browser-default), input[type=date]:not(.browser-default), input[type=datetime]:not(.browser-default), input[type=datetime-local]:not(.browser-default), input[type=tel]:not(.browser-default), input[type=number]:not(.browser-default), input[type=search]:not(.browser-default), textarea.materialize-textarea {
+  border-bottom: none;
+  font-family: "Kalam";
+}
+
+.password-field {
+  position: relative;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #000000;
+}
+
+.toggle-password i {
+  font-size: 20px;
+}/*# sourceMappingURL=style.css.map */

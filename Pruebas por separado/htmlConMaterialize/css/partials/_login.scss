@@ -1,0 +1,140 @@
+@import '../Comun/_variables.scss';
+
+// Fondo y alineación del body
+body {
+    background-image: $imagenFondo;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+// Contenedor del formulario
+.contenedorLogin {
+    background-color: $azulClaro;
+    border-radius: 20px;
+    padding: 20px;
+    max-width: 400px;
+
+    @media (min-width: 768px) {
+        width: 33%;
+    }
+}
+
+// Estilo de los inputs
+.input-field input {
+    background-color: $grisClaro;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+// Estilo del botón de acceso
+.waves-effect.btn {
+    background-color: $azulOscuroBoton;
+    border-radius: 20px;
+    font-family: $kalam;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 10px;
+    width: 70%;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    &:hover {
+        background-color: darken($azulOscuroBoton, 10%);
+    }
+}
+
+// Estilo del logo
+.logo {
+    width: 60px;
+    height: 60px;
+    background-image: $imagenLogo;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+// Estilo de la luna dentro del botón
+.luna {
+    width: 25px;
+    height: 25px;
+    background-image: $imagenLuna;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+}
+
+// Diseño adaptable para móviles
+@media (max-width: 480px) {
+    .contenedorLogin {
+        padding: 15px;
+        border-radius: 15px;
+    }
+
+    .input-field input {
+        padding: 8px;
+    }
+
+    .waves-effect.btn {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+
+    .logo {
+        width: 50px;
+        height: 50px;
+    }
+
+    .luna {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.card-panel {
+    border-radius: 20px;
+    background-color: $azulClaro;
+}
+
+.input-field {
+    background-color: $grisClaro;
+    border-radius: 15px;
+    font-family: $kalam;
+}
+
+// Personalizar el placeholder
+.input-field input::placeholder {
+    font-family: $kalam;
+    color: $negro;
+    opacity: 0.7; // Un poco más tenue para diferenciarlo del texto ingresado
+}
+
+input:not([type]), input[type=text]:not(.browser-default), input[type=password]:not(.browser-default), input[type=email]:not(.browser-default), input[type=url]:not(.browser-default), input[type=time]:not(.browser-default), input[type=date]:not(.browser-default), input[type=datetime]:not(.browser-default), input[type=datetime-local]:not(.browser-default), input[type=tel]:not(.browser-default), input[type=number]:not(.browser-default), input[type=search]:not(.browser-default), textarea.materialize-textarea  {
+    border-bottom: none;
+    font-family: $kalam;
+}
+
+// Estilo para el icono del ojo
+.password-field {
+    position: relative; // Permite posicionar el icono dentro del input
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: $negro;
+}
+
+.toggle-password i {
+    font-size: 20px;
+}

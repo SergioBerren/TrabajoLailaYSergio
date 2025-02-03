@@ -1,0 +1,59 @@
+@import '../Comun/_variables.scss';
+
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.contenedorInicio {
+    display: flex;
+    flex-grow: 1; // Ocupa todo el espacio disponible
+    height: calc(100vh - 50px); // Ajusta según la altura del footer
+}
+
+.menuLateral {
+    width: 10%;
+    padding: 20px;
+    background-color: $verdeClaro;
+}
+
+.divAsignaturas {
+    flex-grow: 1; // Permite que crezca y llene el espacio
+    display: flex;
+    flex-direction: column;
+}
+
+.aula {
+    flex-grow: 1;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 20px;
+    background-color: $verdeClaro;
+}
+
+.aula div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.aula img {
+    max-width: 100px;
+    margin-bottom: 10px;
+}
+
+.aula p {
+    color: $negro;
+    font-size: 14px;
+    font-family: $kalam;
+    margin: 0;
+}
+
+h2, h3 {
+    font-family: $kalam;
+}
