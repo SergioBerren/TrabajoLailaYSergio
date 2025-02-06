@@ -1,71 +1,102 @@
 @import '../css/Comun/_menu.scss';
-@import '../css/partials/_inicio.scss';
 @import '../css/Comun/_footer.scss';
+@import 'https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css';
+@import './Comun/_variables.scss';
 
-//para el contenedor
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+// Contenedor principal
 .contenedorInicio {
-    width: 100%;
-    background-image: $imagenFondo;
-    background-size: cover;
+    display: flex;
+    flex-grow: 1; // Ocupa todo el espacio disponible
+    height: calc(100vh - 50px); // Ajusta según la altura del footer
+}
+
+// Menu Lateral (solo en pantallas grandes)
+.menuLateral {
     padding: 20px;
-    font-family: $kalam, cursive;
+    background-color: $verdeClaro;
 
-    //menu lateral
-    .menuLateral {
-        width: 20%;
-        background-color: $azulClaro;
-        padding: 15px;
-        border-radius: 8px;
-        margin-right: 20px;
-
-        h3 {
-            color: $azulOscuroModoNoche;
-            margin-bottom: 15px;
-        }
-        .noticia {
-            width: 100%;
-            height: auto;
-            margin-bottom: 10px;
-            border-radius: 5px;
-        }
+    // En pantallas grandes
+    @media (min-width: 992px) {
+        width: 25%;
     }
 
-    //del div de asignaturas
-    .divAsignaturas {
-        width: 80%;
-        background-color: $verdeClaro;
-        padding: 20px;
-        border-radius: 8px;
-        h2 {
-            color: $azulOscuroModoNoche;
-            margin-bottom: 20px;
-        }
-        .aula {
-            display: grid;
-            grid-template-columns: repeat(3,1fr);
-            gap: 15px;
-
-            a {
-                text-decoration: none;
-                color: $negro;
-
-                div {
-                    background-color: $blanco;
-                    padding: 10px;
-                    border-radius: 8px;
-                    text-align: center;
-                    img {
-                        width: 100%;
-                        height: auto;
-                        border-radius: 10px;
-                    }
-
-                    p {
-                        margin-top: 10px;
-                        font-size: 16px;
-                    }
-                }
-            }
-        }
+    // En pantallas medianas
+    @media (max-width: 992px) {
+        width: 100%;
     }
+}
+
+// Asignaturas
+.divAsignaturas {
+    flex-grow: 1; // Permite que crezca y llene el espacio
+    display: flex;
+    flex-direction: column;
+}
+
+.aula {
+    flex-grow: 1;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    background-color: $verdeClaro;
+
+    // En pantallas medianas
+    @media (max-width: 992px) {
+        grid-template-columns: repeat(2, 1fr); // 2 columnas en pantallas medianas
+    }
+
+    // En pantallas pequeñas
+    @media (max-width: 600px) {
+        grid-template-columns: 1fr; // 1 columna en pantallas pequeñas
+    }
+}
+
+// Estilo de cada asignatura dentro de aula
+.aula div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: $blanco;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.aula img {
+    max-width: 100px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+.aula p {
+    color: $negro;
+    font-size: 14px;
+    font-family: $kalam;
+    margin: 0;
+}
+
+// Títulos de secciones
+h2, h3 {
+    font-family: $kalam;
+}
+
+// Para las tarjetas de Materialize
+.card {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-content p {
+    color: $negro;
+    font-size: 16px;
+    margin-top: 10px;
 }

@@ -1,4 +1,5 @@
 @import '../Comun/_variables.scss';
+@import 'https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css';
 
 html, body {
     height: 100%;
@@ -7,18 +8,21 @@ html, body {
     flex-direction: column;
 }
 
+// Contenedor principal
 .contenedorInicio {
     display: flex;
     flex-grow: 1; // Ocupa todo el espacio disponible
     height: calc(100vh - 50px); // Ajusta según la altura del footer
 }
 
+// Menu Lateral
 .menuLateral {
     width: 10%;
     padding: 20px;
     background-color: $verdeClaro;
 }
 
+// Asignaturas
 .divAsignaturas {
     flex-grow: 1; // Permite que crezca y llene el espacio
     display: flex;
@@ -35,16 +39,22 @@ html, body {
     background-color: $verdeClaro;
 }
 
+// Estilo de cada asignatura dentro de aula
 .aula div {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    background-color: $blanco;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .aula img {
     max-width: 100px;
     margin-bottom: 10px;
+    border-radius: 8px;
 }
 
 .aula p {
@@ -54,6 +64,19 @@ html, body {
     margin: 0;
 }
 
+// Títulos de secciones
 h2, h3 {
     font-family: $kalam;
+}
+
+// Si necesitas personalizar aún más Materialize puedes agregar estas reglas
+.card {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-content p {
+    color: $negro;
+    font-size: 16px;
+    margin-top: 10px;
 }

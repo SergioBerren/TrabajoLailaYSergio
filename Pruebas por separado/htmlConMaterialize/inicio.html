@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styleInicio.css">
     <link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet">
 </head>
@@ -18,56 +19,83 @@
             <div class="fotoPerfil"></div>
         </div>
     </header>
-    <div class="contenedorInicio">
-        <div class="menuLateral">
-            <h3>Noticias</h3>
+    <div class="contenedorInicio row">
+        <!-- Menu Lateral (visible solo en pantallas grandes) -->
+        <div class="menuLateral col s12 m4 l3">
+            <h3 class="blue-text text-darken-3">Noticias</h3>
             <div>
-                <img src="" alt="Noticia 1" class="noticia">
+                <img src="" alt="Noticia 1" class="noticia responsive-img">
             </div>
             <div>
-                <img src="" alt="Noticia 2" class="noticia">
+                <img src="" alt="Noticia 2" class="noticia responsive-img">
             </div>
             <div>
-                <img src="" alt="Noticia 3" class="noticia">
+                <img src="" alt="Noticia 3" class="noticia responsive-img">
             </div>
         </div>
-        <div class="divAsignaturas">
-            <h2>Mis asignaturas</h2>
-            <div class="aula">
-                <a href="asignatura.html">
-                    <div>
-                        <img src="img/calculo.png" alt="Cálculo">
-                        <p>Cálculo</p>
+        
+        <!-- Div de Asignaturas -->
+        <div class="divAsignaturas col s12 m8 l9">
+            <h2 class="blue-text text-darken-3">Mis asignaturas</h2>
+            <div class="aula row">
+                <a href="asignatura.html" class="col s12 m6 l4">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="img/calculo.png" alt="Cálculo">
+                        </div>
+                        <div class="card-content">
+                            <p>Cálculo</p>
+                        </div>
                     </div>
                 </a>
-                <a href="asignatura.html">
-                    <div>
-                        <img src="img/fisica.jpg" alt="Física">
-                        <p>Física</p>
+                <a href="asignatura.html" class="col s12 m6 l4">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="img/fisica.jpg" alt="Física">
+                        </div>
+                        <div class="card-content">
+                            <p>Física</p>
+                        </div>
                     </div>
                 </a>
-                <a href="asignatura.html">
-                    <div>
-                        <img src="img/Química.jpg" alt="Química">
-                        <p>Química</p>
+                <a href="asignatura.html" class="col s12 m6 l4">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="img/Química.jpg" alt="Química">
+                        </div>
+                        <div class="card-content">
+                            <p>Química</p>
+                        </div>
                     </div>
                 </a>
-                <a href="asignatura.html">
-                    <div>
-                        <img src="img/AtmosferasEstelares.jpg" alt="Atmósferas Estelares">
-                        <p>Atmósferas Estelares</p>
+                <a href="asignatura.html" class="col s12 m6 l4">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="img/AtmosferasEstelares.jpg" alt="Atmósferas Estelares">
+                        </div>
+                        <div class="card-content">
+                            <p>Atmósferas Estelares</p>
+                        </div>
                     </div>
                 </a>
-                <a href="asignatura.html">
-                    <div>
-                        <img src="img/MedioInterestelar.png" alt="Medio Interestelar">
-                        <p>Medio Interestelar</p>
+                <a href="asignatura.html" class="col s12 m6 l4">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="img/MedioInterestelar.png" alt="Medio Interestelar">
+                        </div>
+                        <div class="card-content">
+                            <p>Medio Interestelar</p>
+                        </div>
                     </div>
                 </a>
-                <a href="asignatura.html">
-                    <div>
-                        <img src="img/fyeg.jpg" alt="Formación y Evolución de las Galaxias">
-                        <p>Formación y Evolución de las Galaxias</p>
+                <a href="asignatura.html" class="col s12 m6 l4">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="img/fyeg.jpg" alt="Formación y Evolución de las Galaxias">
+                        </div>
+                        <div class="card-content">
+                            <p>Formación y Evolución de las Galaxias</p>
+                        </div>
                     </div>
                 </a>
             </div>
@@ -77,5 +105,6 @@
         <p>IES Laila y Sergio - Comunidad de Madrid</p>
         <div class="logoFooter"></div>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
 </html>
