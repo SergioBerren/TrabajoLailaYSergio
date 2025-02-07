@@ -2,7 +2,6 @@
 @import '../css/Comun/_footer.scss';
 @import 'https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css';
 @import './Comun/_variables.scss';
-
 html, body {
     height: 100%;
     margin: 0;
@@ -47,7 +46,7 @@ html, body {
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     background-color: $verdeClaro;
-
+    align-items: center;
     // En pantallas medianas
     @media (max-width: 992px) {
         grid-template-columns: repeat(2, 1fr); // 2 columnas en pantallas medianas
@@ -66,13 +65,14 @@ html, body {
     align-items: center;
     text-align: center;
     background-color: $blanco;
-    padding: 15px;
+    width: 100%;
+    // padding: 15px; // Padding estándar para las cartas
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .aula img {
-    max-width: 100px;
+    max-width: 100px; // Ajuste de las imágenes para que no se estiren
     margin-bottom: 10px;
     border-radius: 8px;
 }

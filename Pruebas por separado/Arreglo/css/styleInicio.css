@@ -1,0 +1,146 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/** Menú Superior **/
+.cabecera {
+    width: 100%;
+    background-color: blue; /* Menú superior sigue siendo azul */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /** Asegura que esté por encima de otros elementos **/
+}
+
+/** Contenedor principal **/
+.contenedorInicio {
+    display: flex;
+    flex-grow: 1; /** Ocupa todo el espacio disponible **/
+    height: calc(100vh - 120px); /** Ajusta según la altura del menú superior y el footer **/
+    margin-top: 60px; /** Espacio para el menú superior **/
+    margin-bottom: 60px; /** Espacio para el footer **/
+}
+
+/** Menu Lateral **/
+.menuLateral {
+    width: 250px; /** Ancho fijo para el menú lateral **/
+    padding: 20px;
+    background-color: green; /* Aquí cambié el color a verde */
+    position: fixed; /** Fijar el menú lateral **/
+    height: calc(100vh - 120px); /** Altura menos el menú superior y el footer **/
+    left: 0; /** Pegado a la izquierda **/
+    top: 60px; /** Debajo del menú superior **/
+    overflow-y: auto; /** Scroll si el contenido es muy largo **/
+}
+
+/** Asignaturas **/
+.divAsignaturas {
+    flex-grow: 1; /** Permite que crezca y llene el espacio **/
+    display: flex;
+    flex-direction: column;
+    margin-left: 250px; /** Margen para no solaparse con el menú lateral **/
+    padding: 20px; /** Espaciado interno **/
+}
+
+.aula {
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    grid-template-rows: repeat(2, 1fr); /* 2 filas */
+    gap: 20px;
+    background-color: green;
+    justify-items: center; /** Centra las cartas en el eje X **/
+    justify-content: center; /** Centrar el grid en el eje X **/
+}
+
+/** Estilo de cada asignatura dentro de aula **/
+.aula div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    padding: 30px; /** Más padding para hacer las cartas más grandes **/
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease; /** Efecto de hover **/
+    width: 90%; /** Ancho de las cartas **/
+    max-width: 300px; /** Limita el ancho máximo de las cartas **/
+    margin: 0 auto; /** Centrar las cartas dentro de su contenedor **/
+}
+
+.aula div:hover {
+    transform: scale(1.05); /** Efecto de hover para agrandar la carta **/
+}
+
+.aula img {
+    max-width: 150px; /** Imágenes más grandes **/
+    margin-bottom: 15px; /** Más espacio debajo de la imagen **/
+    border-radius: 8px;
+}
+
+.aula p {
+    color: black;
+    font-size: 16px; /** Texto más grande **/
+    /*font-family: $kalam;*/
+    margin: 0;
+}
+
+/** Títulos de secciones **/
+h2, h3 {
+    /*font-family: $kalam;*/
+}
+
+/** Footer **/
+.footer {
+    width: 100%;
+    background-color: blue; /* Footer sigue siendo azul */
+    padding: 10px 20px;
+    text-align: center;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /** Asegura que esté por encima de otros elementos **/
+    position: fixed; /** Fijar el footer **/
+    bottom: 0; /** Pegado abajo **/
+}
+
+.card {
+    width: 90%; /* Ancho de las cartas */
+    max-width: 300px; /* Limita el ancho máximo */
+    margin: 0 auto; /* Centra las cartas horizontalmente */
+}
+
+/* Estilos Responsivos */
+
+/** Para pantallas de hasta 992px **/
+@media (max-width: 992px) {
+    .aula {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+        grid-template-rows: repeat(3, 1fr); /* 3 filas */
+    }
+}
+
+/** Para pantallas de hasta 600px **/
+@media (max-width: 600px) {
+    .aula {
+        grid-template-columns: 1fr; /* 1 columna */
+        grid-template-rows: repeat(6, 1fr); /* 6 filas (las cartas) */
+    }
+    .cabecera {
+        flex-direction: column; /* El menú superior se vuelve vertical en pantallas pequeñas */
+        align-items: center;
+    }
+    .menuLateral {
+        width: 100%; /* El menú lateral se convierte en un menú superior */
+        position: static; /* No fijo en pantallas pequeñas */
+        top: 0;
+        margin-bottom: 20px;
+    }
+    .divAsignaturas {
+        margin-left: 0; /* El margen del contenedor de asignaturas desaparece */
+    }
+}
