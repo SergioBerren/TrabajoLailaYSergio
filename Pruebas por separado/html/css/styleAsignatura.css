@@ -79,10 +79,6 @@ a {
     height: 80px;
   }
 }
-.contenedorAsignatura {
-  background-color: #A8C3A5;
-}
-
 footer {
   display: flex;
   justify-content: center;
