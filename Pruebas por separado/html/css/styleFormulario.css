@@ -1,4 +1,3 @@
-@charset "UTF-8";
 header {
   background-color: #9BB3B8;
   padding: 1rem;
@@ -113,115 +112,50 @@ footer .logoFooter {
   border-radius: 50%;
 }
 
-.contenedorAsignatura {
+body {
+  background-color: #9BB3B8;
+  color: #000000;
+  font-family: "Kalam";
   background-image: url("../img/estrellitas.jpg");
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  background-size: cover;
+  background-position: center;
+}
+
+.container {
+  margin-top: 50px;
   padding: 20px;
+  background: #FFFFFF;
+  border-radius: 10px;
+}
+
+h3 {
+  color: #001F54;
+}
+
+.input-field {
+  margin-bottom: 20px;
+}
+
+.input-field input,
+.input-field textarea,
+.input-field select {
+  border-bottom: 2px solid #001F54;
+}
+
+.input-field label {
+  color: #001F54;
+}
+
+.btn {
+  background-color: #053D64;
+  color: #FFFFFF;
   width: 100%;
-  height: auto;
-  box-sizing: border-box;
+}
+.btn:hover {
+  background-color: #031f33;
 }
 
-.titulo h3 {
-  margin-top: 10px;
-  text-align: center;
-  font-size: 28px;
-  color: antiquewhite;
-  margin-bottom: 10px;
-}
-
-.videoInicial iframe {
-  display: block;
-  margin: 0 auto;
-  max-width: 100%;
-  height: 300px;
-  border-radius: 10px;
-}
-
-.tarjeta {
-  background-color: #FFFFFF;
-  border-radius: 20px;
-  width: 90%;
-  max-width: 500px;
-  margin: 15px 0;
-  padding: 15px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  text-align: left;
-  box-sizing: border-box;
-}
-
-.titulo-tarjeta {
-  font-size: 18px;
+p {
   color: #303030;
-  margin-bottom: 10px;
-}
-
-button {
-  background-color: #053D64;
-  color: #FFFFFF;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 30px;
-  text-align: center;
-  margin-top: 0;
-  width: auto;
-  min-width: 120px;
-  max-width: 200px;
-}
-
-.btn-pequeño {
-  text-decoration: none;
-  padding: 8px 15px;
-  background-color: #053D64;
-  color: #FFFFFF;
-  border-radius: 30px;
-  font-size: 14px;
-  display: inline-block;
-  text-align: center;
-  margin-top: 0;
-  width: auto;
-  min-width: 120px;
-  max-width: 200px;
-}
-
-/* Calendario */
-.calendario iframe {
-  display: block;
-  margin: 0 auto;
-  width: 90%;
-  max-width: 600px;
-  height: auto;
-  min-height: 300px;
-  border-radius: 10px;
-  margin-bottom: 10px;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .titulo h3 {
-    font-size: 22px;
-  }
-  .videoInicial iframe {
-    height: 180px;
-  }
-  .tarjeta {
-    width: 95%;
-    flex-direction: column;
-    text-align: center;
-  }
-  button, .btn-pequeño {
-    width: 100%;
-    max-width: 200px;
-    margin-top: 10px;
-  }
-  .calendario iframe {
-    height: 250px;
-  }
-}/*# sourceMappingURL=styleAsignatura.css.map */
+  font-size: 1.1em;
+}/*# sourceMappingURL=styleFormulario.css.map */

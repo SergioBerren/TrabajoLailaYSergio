@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Astrofísica</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="css/styleFormulario.css">
+</head>
+<body>
+    <div class="container">
+        <h3 class="center-align">Formulario de Astrofísica</h3>
+        <form>
+            <div class="input-field">
+                <input type="text" id="nombre" name="nombre" required>
+                <label for="nombre">Nombre Completo</label>
+            </div>
+            <div class="input-field">
+                <input type="email" id="email" name="email" required>
+                <label for="email">Correo Electrónico</label>
+            </div>
+            <div class="input-field">
+                <input type="text" id="institucion" name="institucion" required>
+                <label for="institucion">Institución Académica</label>
+            </div>
+            <div class="input-field">
+                <select id="interes" name="interes">
+                    <option value="" disabled selected>Elige una opción</option>
+                    <option value="estrellas">Evolución Estelar</option>
+                    <option value="galaxias">Formación de Galaxias</option>
+                    <option value="cosmologia">Cosmología</option>
+                    <option value="agujeros">Agujeros Negros</option>
+                    <option value="materiaoscura">Materia Oscura</option>
+                    <option value="exoplanetas">Exoplanetas</option>
+                    <option value="ondasgravitacionales">Ondas Gravitacionales</option>
+                </select>
+                <label for="interes">Área de Interés</label>
+            </div>
+            <div class="input-field">
+                <input type="number" id="experiencia" name="experiencia" min="0" max="50" required>
+                <label for="experiencia">Años de Experiencia en Astrofísica</label>
+            </div>
+            <div class="input-field">
+                <p>¿Has utilizado telescopios profesionales?</p>
+                <div>
+                    <label>
+                        <input name="telescopio" type="radio" value="si" required />
+                        <span>Sí</span>
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input name="telescopio" type="radio" value="no" required />
+                        <span>No</span>
+                    </label>
+                </div>
+            </div>
+            <div class="input-field">
+                <textarea id="mensaje" name="mensaje" class="materialize-textarea" required></textarea>
+                <label for="mensaje">Consulta</label>
+            </div>
+            <p>
+                <label>
+                    <input type="checkbox" id="suscripcion" name="suscripcion" />
+                    <span>Suscribirme a novedades sobre astrofísica</span>
+                </label>
+            </p>
+            <div class="center-align">
+                <button class="btn waves-effect waves-light" type="submit">Enviar</button>
+            </div>
+        </form>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            let elemsSelect = document.querySelectorAll('select');
+            M.FormSelect.init(elemsSelect);
+
+            let elemsTextarea = document.querySelectorAll('textarea');
+            M.textareaAutoResize(elemsTextarea);
+        });
+    </script>
+</body>
+</html>

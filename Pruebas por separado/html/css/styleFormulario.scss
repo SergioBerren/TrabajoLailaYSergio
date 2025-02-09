@@ -1,0 +1,47 @@
+@import '../css/Comun/_menu.scss';
+@import '../css/partials/formulario';
+@import '../css/Comun/_footer.scss';
+body {
+    background-color: $azulClaro;
+    color: $negro;
+    font-family: $kalam;
+    background-image: $imagenFondo;
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    margin-top: 50px;
+    padding: 20px;
+    background: $blanco;
+    border-radius: 10px;
+}
+
+h3 {
+    color: $azulOscuroModoNoche;
+}
+.input-field {
+    margin-bottom: 20px;
+}
+.input-field input,
+.input-field textarea,
+.input-field select {
+    border-bottom: 2px solid $azulOscuroModoNoche;
+}
+.input-field label {
+    color: $azulOscuroModoNoche;
+}
+
+
+.btn {
+    background-color: $azulOscuroBoton;
+    color: $blanco;
+    width: 100%;
+    &:hover {
+        background-color: darken($azulOscuroBoton, 10%);
+    }
+}
+p {
+    color: $gris;
+    font-size: 1.1em;
+}
