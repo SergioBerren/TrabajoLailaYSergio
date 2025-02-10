@@ -94,6 +94,7 @@ html, body {
 /** Títulos de secciones **/
 h2, h3 {
     /*font-family: $kalam;*/
+    font-family: sans-serif;
 }
 
 /** Footer **/
