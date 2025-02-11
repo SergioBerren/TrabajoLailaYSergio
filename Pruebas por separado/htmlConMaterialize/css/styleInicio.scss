@@ -2,101 +2,87 @@
 @import '../css/Comun/_footer.scss';
 @import 'https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css';
 @import './Comun/_variables.scss';
+@import url('https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css');
+
 html, body {
+    overflow-y: hidden;
     height: 100%;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
+    width: 100%;
 }
 
-// Contenedor principal
+.noticia {
+    border: 2px solid $negro;
+}
+
 .contenedorInicio {
-    display: flex;
-    flex-grow: 1; // Ocupa todo el espacio disponible
-    height: calc(100vh - 50px); // Ajusta según la altura del footer
-}
-
-// Menu Lateral (solo en pantallas grandes)
-.menuLateral {
+    width: 100%;
+    background-image: $imagenFondo;
+    background-size: cover;
     padding: 20px;
-    background-color: $verdeClaro;
-
-    // En pantallas grandes
-    @media (min-width: 992px) {
-        width: 25%;
-    }
-
-    // En pantallas medianas
-    @media (max-width: 992px) {
-        width: 100%;
-    }
+    font-family: $kalam, cursive;
+    display: flex;
+    height: 80%;
 }
 
-// Asignaturas
+.menuLateral {
+    width: 20%;
+    background-color: $azulClaro;
+    padding: 15px;
+    border-radius: 8px;
+    margin-right: 20px;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+.menuLateral h3 {
+    color: $azulOscuroModoNoche;
+    margin-bottom: 15px;
+}
+
+.menuLateral .noticia {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
 .divAsignaturas {
-    flex-grow: 1; // Permite que crezca y llene el espacio
-    display: flex;
-    flex-direction: column;
+    width: 80%;
+    background-color: $verdeClaro;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.divAsignaturas h2 {
+    color: $azulOscuroModoNoche;
+    margin-bottom: 20px;
 }
 
 .aula {
-    flex-grow: 1;
-    padding: 20px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    background-color: $verdeClaro;
-    align-items: center;
-    // En pantallas medianas
-    @media (max-width: 992px) {
-        grid-template-columns: repeat(2, 1fr); // 2 columnas en pantallas medianas
-    }
-
-    // En pantallas pequeñas
-    @media (max-width: 600px) {
-        grid-template-columns: 1fr; // 1 columna en pantallas pequeñas
-    }
+    gap: 15px;
 }
 
-// Estilo de cada asignatura dentro de aula
-.aula div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+.aula a {
+    text-decoration: none;
+    color: $negro;
+}
+
+.aula a div {
     background-color: $blanco;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.aula a div img {
     width: 100%;
-    // padding: 15px; // Padding estándar para las cartas
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    height: auto;
+    border-radius: 10px;
 }
 
-.aula img {
-    max-width: 100px; // Ajuste de las imágenes para que no se estiren
-    margin-bottom: 10px;
-    border-radius: 8px;
-}
-
-.aula p {
-    color: $negro;
-    font-size: 14px;
-    font-family: $kalam;
-    margin: 0;
-}
-
-// Títulos de secciones
-h2, h3 {
-    font-family: $kalam;
-}
-
-// Para las tarjetas de Materialize
-.card {
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.card-content p {
-    color: $negro;
-    font-size: 16px;
+.aula a div p {
     margin-top: 10px;
+    font-size: 16px;
 }

@@ -1,4 +1,5 @@
 @import 'https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css';
+@import url("https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css");
 header {
   background-color: #9BB3B8;
   padding: 1rem;
@@ -114,94 +115,84 @@ footer .logoFooter {
 }
 
 html, body {
+  overflow-y: hidden;
   height: 100%;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
+  width: 100%;
+}
+
+.noticia {
+  border: 2px solid #000000;
 }
 
 .contenedorInicio {
+  width: 100%;
+  background-image: url("../img/estrellitas.jpg");
+  background-size: cover;
+  padding: 20px;
+  font-family: "Kalam", cursive;
   display: flex;
-  flex-grow: 1;
-  height: calc(100vh - 50px);
+  height: 80%;
 }
 
 .menuLateral {
-  padding: 20px;
-  background-color: #A8C3A5;
+  width: 20%;
+  background-color: #9BB3B8;
+  padding: 15px;
+  border-radius: 8px;
+  margin-right: 20px;
+  overflow-y: auto;
+  scrollbar-width: none;
 }
-@media (min-width: 992px) {
-  .menuLateral {
-    width: 25%;
-  }
+
+.menuLateral h3 {
+  color: #001F54;
+  margin-bottom: 15px;
 }
-@media (max-width: 992px) {
-  .menuLateral {
-    width: 100%;
-  }
+
+.menuLateral .noticia {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 5px;
 }
 
 .divAsignaturas {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
+  width: 80%;
+  background-color: #A8C3A5;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.divAsignaturas h2 {
+  color: #001F54;
+  margin-bottom: 20px;
 }
 
 .aula {
-  flex-grow: 1;
-  padding: 20px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  background-color: #A8C3A5;
-  align-items: center;
-}
-@media (max-width: 992px) {
-  .aula {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (max-width: 600px) {
-  .aula {
-    grid-template-columns: 1fr;
-  }
+  gap: 15px;
 }
 
-.aula div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+.aula a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.aula a div {
   background-color: #FFFFFF;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.aula a div img {
   width: 100%;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  height: auto;
+  border-radius: 10px;
 }
 
-.aula img {
-  max-width: 100px;
-  margin-bottom: 10px;
-  border-radius: 8px;
-}
-
-.aula p {
-  color: #000000;
-  font-size: 14px;
-  font-family: "Kalam";
-  margin: 0;
-}
-
-h2, h3 {
-  font-family: "Kalam";
-}
-
-.card {
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.card-content p {
-  color: #000000;
-  font-size: 16px;
+.aula a div p {
   margin-top: 10px;
+  font-size: 16px;
 }/*# sourceMappingURL=styleInicio.css.map */
