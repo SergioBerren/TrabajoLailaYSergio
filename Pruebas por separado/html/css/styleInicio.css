@@ -170,6 +170,12 @@ footer .logoFooter {
   border-radius: 50%;
 }
 
+html, body {
+  overflow-y: hidden;
+  height: 100%;
+  width: 100%;
+}
+
 .contenedorInicio {
   width: 100%;
   background-image: url("../img/estrellitas.jpg");
@@ -183,6 +189,9 @@ footer .logoFooter {
   padding: 15px;
   border-radius: 8px;
   margin-right: 20px;
+  overflow-y: auto;
+  height: 76%;
+  scrollbar-width: none;
 }
 .contenedorInicio .menuLateral h3 {
   color: #001F54;
@@ -199,6 +208,7 @@ footer .logoFooter {
   background-color: #A8C3A5;
   padding: 20px;
   border-radius: 8px;
+  height: 75%;
 }
 .contenedorInicio .divAsignaturas h2 {
   color: #001F54;

@@ -2,6 +2,12 @@
 @import '../css/partials/_inicio.scss';
 @import '../css/Comun/_footer.scss';
 
+html, body{
+    overflow-y: hidden;
+    height: 100%;
+    width: 100%
+}
+
 //para el contenedor
 .contenedorInicio {
     width: 100%;
@@ -17,6 +23,9 @@
         padding: 15px;
         border-radius: 8px;
         margin-right: 20px;
+        overflow-y: auto;
+        height: 76%;
+        scrollbar-width: none;
 
         h3 {
             color: $azulOscuroModoNoche;
@@ -36,6 +45,7 @@
         background-color: $verdeClaro;
         padding: 20px;
         border-radius: 8px;
+        height: 75%;
         h2 {
             color: $azulOscuroModoNoche;
             margin-bottom: 20px;
