@@ -156,13 +156,14 @@ html, body {
   border-radius: 5px;
 }
 
+/*
 div.aula.row {
-  display: flex;
-  justify-content: center;
-  text-wrap: wrap;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    text-wrap: wrap;
+    align-items: center;
 }
-
+*/
 .divAsignaturas {
   width: 80%;
   background-color: #A8C3A5;
@@ -178,6 +179,7 @@ div.aula.row {
 /*.aula {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     gap: 15px;
 }*/
 .aula a {
