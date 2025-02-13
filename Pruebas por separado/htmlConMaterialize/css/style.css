@@ -1,4 +1,35 @@
 body {
+  margin: 0;
+  overflow: hidden; /* Evitar el desplazamiento por las estrellas */
+}
+
+.estrella {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(45deg, aquamarina, azul);
+  -webkit-clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+          clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); /* Forma de estrella */
+  pointer-events: none; /* Evitar interferencia con clics */
+  animation: desvanecer 1s linear forwards, centelleo 1s ease-in-out infinite;
+}
+
+@keyframes desvanecer {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+}
+@keyframes centelleo {
+  50% {
+    transform: scale(1.2);
+  }
+}
+body {
   background-image: url("../img/estrellitas.jpg");
   background-size: cover;
   min-height: 100vh;

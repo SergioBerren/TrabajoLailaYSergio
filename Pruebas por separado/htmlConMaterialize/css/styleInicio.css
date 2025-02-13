@@ -1,5 +1,36 @@
 @import 'https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css';
 @import url("https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css");
+body {
+  margin: 0;
+  overflow: hidden; /* Evitar el desplazamiento por las estrellas */
+}
+
+.estrella {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(45deg, aquamarina, azul);
+  -webkit-clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+          clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); /* Forma de estrella */
+  pointer-events: none; /* Evitar interferencia con clics */
+  animation: desvanecer 1s linear forwards, centelleo 1s ease-in-out infinite;
+}
+
+@keyframes desvanecer {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+}
+@keyframes centelleo {
+  50% {
+    transform: scale(1.2);
+  }
+}
 header {
   background-color: #9BB3B8;
   padding: 1rem;
@@ -80,6 +111,37 @@ a {
     height: 80px;
   }
 }
+body {
+  margin: 0;
+  overflow: hidden; /* Evitar el desplazamiento por las estrellas */
+}
+
+.estrella {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(45deg, aquamarina, azul);
+  -webkit-clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+          clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); /* Forma de estrella */
+  pointer-events: none; /* Evitar interferencia con clics */
+  animation: desvanecer 1s linear forwards, centelleo 1s ease-in-out infinite;
+}
+
+@keyframes desvanecer {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+}
+@keyframes centelleo {
+  50% {
+    transform: scale(1.2);
+  }
+}
 footer {
   display: flex;
   justify-content: center;
@@ -114,10 +176,47 @@ footer .logoFooter {
   border-radius: 50%;
 }
 
+body {
+  margin: 0;
+  overflow: hidden; /* Evitar el desplazamiento por las estrellas */
+}
+
+.estrella {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(45deg, aquamarina, azul);
+  -webkit-clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+          clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); /* Forma de estrella */
+  pointer-events: none; /* Evitar interferencia con clics */
+  animation: desvanecer 1s linear forwards, centelleo 1s ease-in-out infinite;
+}
+
+@keyframes desvanecer {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+}
+@keyframes centelleo {
+  50% {
+    transform: scale(1.2);
+  }
+}
 html, body {
-  overflow-y: hidden;
-  height: 100%;
+  /*overflow-y: hidden;
+  height: 100%;*/
   width: 100%;
+}
+
+.cabecera {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .noticia {
@@ -166,6 +265,7 @@ div.aula.row {
 */
 .divAsignaturas {
   width: 80%;
+  height: 90%;
   background-color: #A8C3A5;
   padding: 20px;
   border-radius: 8px;
