@@ -105,3 +105,10 @@ div.aula.row {
     margin-top: 10px;
     font-size: 16px;
 }
+
+.card-image img {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    height: 150px; /* Ajusta la altura según tu preferencia */
+    object-fit: cover; /* Recorta la imagen para llenar el espacio sin deformarla */
+    border-radius: 5px; /* Opcional: esquinas redondeadas */
+}
