@@ -1,0 +1,34 @@
+@import '../css/Comun/_menu.scss';
+@import '../css/partials/_asignaturaInicial.scss';
+@import '../css/Comun/_footer.scss';
+
+body {
+    background-image: $imagenFondo;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: $kalam;
+}
+
+.tema-container {
+    background-color: $verdeClaro;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: $gris;
+}
+
+h3 {
+    color: $blanco;
+    text-align: center;
+}
+
+h5 {
+    color: $gris;
+}
+
+.responsive-img {
+    width: 250px;
+    height: 150px;
+    display: block;
+    margin: 0 auto;
+}
+

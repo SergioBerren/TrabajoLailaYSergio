@@ -1,0 +1,143 @@
+header {
+  background-color: #9BB3B8;
+  padding: 1rem;
+  color: #000000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.h1Header, .pHeader {
+  font-family: "Kalam";
+}
+
+.cabecera {
+  display: flex;
+  align-items: center;
+}
+
+.cabecera_izquierda {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cabecera_derecha {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.fotoPerfil {
+  background-image: url("../img/fotoPerfil.jpg");
+  width: 80px;
+  height: 80px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+}
+
+.logo {
+  background-image: url("../img/logoTrabajoDIW.jpg");
+  width: 60px;
+  height: 60px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: nowrap;
+  }
+  .cabecera {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: nowrap;
+  }
+  .cabecera_izquierda, .cabecera_derecha {
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: nowrap;
+  }
+  .fotoPerfil {
+    width: 80px;
+    height: 80px;
+  }
+}
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  background-color: #9BB3B8;
+  color: #000000;
+  padding: 0.5rem;
+}
+footer .footerContent {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+footer p {
+  margin: 0;
+  padding: 0.5rem;
+  font-family: "Kalam";
+}
+footer .logoFooter {
+  margin-left: 400px;
+  width: 50px;
+  height: 50px;
+  background-image: url("../img/logoFooter.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+}
+
+body {
+  background-image: url("../img/estrellitas.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: "Kalam";
+}
+
+.tema-container {
+  background-color: #A8C3A5;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: #303030;
+}
+
+h3 {
+  color: #FFFFFF;
+  text-align: center;
+}
+
+h5 {
+  color: #303030;
+}
+
+.responsive-img {
+  width: 250px;
+  height: 150px;
+  display: block;
+  margin: 0 auto;
+}/*# sourceMappingURL=styleAsignaturaInicial.css.map */
