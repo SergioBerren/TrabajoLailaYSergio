@@ -3,10 +3,11 @@
 @import 'https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css';
 @import './Comun/_variables.scss';
 @import url('https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css');
+@import './partials/styleEstrellitas';
 
 html, body {
-    /*overflow-y: hidden;
-    height: 100%;*/
+    overflow-y: hidden;
+    height: 100%;
     width: 100%;
 }
 
@@ -52,36 +53,19 @@ html, body {
     border-radius: 5px;
 }
 
-// PRUEBA
-/*
-div.aula.row {
-    display: flex;
-    justify-content: center;
-    text-wrap: wrap;
-    align-items: center;
-}
-*/
 .divAsignaturas {
     width: 80%;
-    height: 90%;
+    height: 100%;
     background-color: $verdeClaro;
     padding: 20px;
     border-radius: 8px;
+    overflow-y: auto;
 }
 
 .divAsignaturas h2 {
     color: $azulOscuroModoNoche;
     margin-bottom: 20px;
 }
-
-
-//PRUEBA FLEX
-/*.aula {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 15px;
-}*/
 
 .aula a {
     text-decoration: none;

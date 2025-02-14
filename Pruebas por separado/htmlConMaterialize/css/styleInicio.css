@@ -115,9 +115,40 @@ footer .logoFooter {
   border-radius: 50%;
 }
 
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+.estrella {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: linear-gradient(45deg, aquamarine, yellow);
+  -webkit-clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+          clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  pointer-events: none;
+  animation: desvanecer 1s linear forwards, centelleo 1s ease-in-out infinite;
+}
+
+@keyframes desvanecer {
+  0% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.5) translateY(-20px);
+  }
+}
+@keyframes centelleo {
+  50% {
+    transform: scale(1.3);
+  }
+}
 html, body {
-  /*overflow-y: hidden;
-  height: 100%;*/
+  overflow-y: hidden;
+  height: 100%;
   width: 100%;
 }
 
@@ -163,20 +194,13 @@ html, body {
   border-radius: 5px;
 }
 
-/*
-div.aula.row {
-    display: flex;
-    justify-content: center;
-    text-wrap: wrap;
-    align-items: center;
-}
-*/
 .divAsignaturas {
   width: 80%;
-  height: 90%;
+  height: 100%;
   background-color: #A8C3A5;
   padding: 20px;
   border-radius: 8px;
+  overflow-y: auto;
 }
 
 .divAsignaturas h2 {
@@ -184,12 +208,6 @@ div.aula.row {
   margin-bottom: 20px;
 }
 
-/*.aula {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 15px;
-}*/
 .aula a {
   text-decoration: none;
   color: #000000;
