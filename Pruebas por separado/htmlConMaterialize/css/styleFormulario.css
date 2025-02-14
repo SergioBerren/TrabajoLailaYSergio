@@ -78,10 +78,6 @@ a {
     height: 80px;
   }
 }
-.contenedorAsignatura {
-  background-color: #A8C3A5;
-}
-
 footer {
   display: flex;
   justify-content: center;
@@ -114,4 +110,52 @@ footer .logoFooter {
   background-size: cover;
   background-position: center;
   border-radius: 50%;
-}/*# sourceMappingURL=styleAsignatura.css.map */
+}
+
+body {
+  background-color: #9BB3B8;
+  color: #000000;
+  font-family: "Kalam";
+  background-image: url("../img/estrellitas.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.container {
+  margin-top: 50px;
+  padding: 20px;
+  background: #FFFFFF;
+  border-radius: 10px;
+}
+
+h3 {
+  color: #001F54;
+}
+
+.input-field {
+  margin-bottom: 20px;
+}
+
+.input-field input,
+.input-field textarea,
+.input-field select {
+  border-bottom: 2px solid #001F54;
+}
+
+.input-field label {
+  color: #001F54;
+}
+
+.btn {
+  background-color: #053D64;
+  color: #FFFFFF;
+  width: 100%;
+}
+.btn:hover {
+  background-color: #031f33;
+}
+
+p {
+  color: #303030;
+  font-size: 1.1em;
+}/*# sourceMappingURL=styleFormulario.css.map */
