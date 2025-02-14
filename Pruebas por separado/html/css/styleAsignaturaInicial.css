@@ -119,6 +119,12 @@ body {
   font-family: "Kalam";
 }
 
+iframe {
+  display: block;
+  margin: 20px auto;
+  max-width: 100%;
+}
+
 .tema-container {
   background-color: #A8C3A5;
   padding: 20px;

@@ -8,13 +8,18 @@ body {
     background-attachment: fixed;
     font-family: $kalam;
 }
-
+iframe {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+}
 .tema-container {
     background-color: $verdeClaro;
     padding: 20px;
     border-radius: 10px;
     box-shadow: $gris;
 }
+
 
 h3 {
     color: $blanco;
