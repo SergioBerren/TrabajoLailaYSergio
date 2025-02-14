@@ -1,3 +1,4 @@
+@charset "UTF-8";
 header {
   background-color: #9BB3B8;
   padding: 1rem;
@@ -114,4 +115,66 @@ footer .logoFooter {
   background-size: cover;
   background-position: center;
   border-radius: 50%;
+}
+
+/* Estilo para el contenedor principal */
+.contenedorAsignatura {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Estilos para la sección de los temas */
+.tema1 {
+  width: 80%;
+  max-width: 800px;
+  margin-top: 30px;
+}
+.tema1 h5 {
+  font-size: 1.5rem;
+  color: #0277BD;
+  margin-bottom: 20px;
+}
+.tema1 .tarjeta {
+  margin-bottom: 20px;
+}
+.tema1 .tarjeta .contenido-tarjeta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #f1f1f1;
+  border-radius: 8px;
+}
+.tema1 .tarjeta .contenido-tarjeta .titulo-tarjeta {
+  font-size: 1.1rem;
+  color: #555;
+}
+.tema1 .tarjeta .contenido-tarjeta button {
+  background-color: #2196F3;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.tema1 .tarjeta .contenido-tarjeta button:hover {
+  background-color: #1976D2;
+}
+.tema1 .tarjeta .contenido-tarjeta .btn-small {
+  background-color: #0277BD;
+  padding: 10px 15px;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+}
+.tema1 .tarjeta .contenido-tarjeta .btn-small:hover {
+  background-color: #01579B;
+}
+
+/* Calendario */
+.calendario {
+  width: 100%;
+  margin-top: 20px;
 }/*# sourceMappingURL=styleAsignatura.css.map */

@@ -3,19 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Astrofisica-Pagina inicial</title>
+    <title>Astrofisica - Página inicial</title>
+    <!-- Enlace a Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Estilos personalizados -->
     <link rel="stylesheet" href="css/styleAsignatura.css">
     <link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet">
-    <!--  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
 </head>
-
 <body>
-    <header>
-        <div class="cabecera izquierda">
+    <!-- Encabezado -->
+    <header class="cabecera">
+        <div class="cabecera_izquierda">
             <div class="logo"></div>
             <h1 class="h1Header">IES Laila y Sergio</h1>
         </div>
-        <div class="cabecera derecha">
+        <div class="cabecera_derecha">
             <p class="pHeader">Mi Nombre</p>
             <div class="fotoPerfil"></div>
         </div>
@@ -40,7 +42,7 @@
                 <div class="tarjeta">
                     <div class="contenido-tarjeta">
                         <span class="titulo-tarjeta">PDF dado en la primera clase</span>
-                        <button> Hecho</button>
+                        <button class="btn-small"> Hecho</button>
                     </div>
                 </div>
             </div>
@@ -51,7 +53,7 @@
                     <div class="contenido-tarjeta">
                         <span class="titulo-tarjeta">Video</span>
                         <a href="https://www.youtube.com/watch?si=lrRtfboZLMDb3Lh5&v=MiIBM1uFSxg&feature=youtu.be"
-                            target="_blank" class="btn-pequeño">Ver video</a>
+                            target="_blank" class="btn-small">Ver video</a>
                     </div>
                 </div>
             </div>
@@ -64,7 +66,7 @@
                 <div class="tarjeta">
                     <div class="contenido-tarjeta">
                         <span class="titulo-tarjeta">Ejercicios (Temas 1-2-3-4)</span>
-                        <a href="/Pruebas por separado/html/wuolah-free-Entregable-1.pdf" class="btn-pequeño">Descargar
+                        <a href="/Pruebas por separado/html/wuolah-free-Entregable-1.pdf" class="btn-small">Descargar
                             PDF</a>
                     </div>
                 </div>
@@ -75,28 +77,31 @@
                         <a href="formulario.html">
                             <span class="titulo-tarjeta">Formulario Autoevaluación del curso</span>
                         </a>
-                        <button> Hecho</button>
+                        <button class="btn-small"> Hecho</button>
                     </div>
                 </div>
             </div>
 
             <!-- Calendario -->
-            <div class="container ">
-                <h3 class="center-align">Calendario Interactivo</h3>
-                <div class="calendario">
-                    <iframe src="https://www.google.com/calendar/embed?src=your-calendar-id&ctz=America%2FNew_York" 
-                        width="800" 
-                        height="600" 
-                        frameborder="0" 
-                        scrolling="no">
-                    </iframe>
+            <div class="row">
+                <!-- Calendario alineado a la izquierda -->
+                <div class="col s12 m8 l6">
+                    <h3 class="center-align">Calendario Interactivo</h3>
+                    <div class="calendario">
+                        <iframe src="https://www.google.com/calendar/embed?src=your-calendar-id&ctz=America%2FNew_York"
+                            width="800" height="600" frameborder="0" scrolling="no"></iframe>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
     <footer class="footer">
         <p>IES Laila y Sergio - Comunidad de Madrid</p>
         <div class="logoFooter"></div>
     </footer>
+
+    <!-- Scripts de Materialize -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
 </html>
