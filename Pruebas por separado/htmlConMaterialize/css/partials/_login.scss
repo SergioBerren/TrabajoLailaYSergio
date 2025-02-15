@@ -134,8 +134,7 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
     transform: translateY(-50%);
     cursor: pointer;
     color: $negro;
-}
-
-.toggle-password i {
+ i {
     font-size: 20px;
+ }
 }
