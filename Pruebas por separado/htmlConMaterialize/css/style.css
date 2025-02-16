@@ -127,7 +127,6 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
   cursor: pointer;
   color: #000000;
 }
-
 .toggle-password i {
   font-size: 20px;
 }

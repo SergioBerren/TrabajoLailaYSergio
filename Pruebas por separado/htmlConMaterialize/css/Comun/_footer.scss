@@ -2,9 +2,9 @@
 
 footer {
     display: flex;
-    // Distribuye los elementos a los extremos
+    // distribuye los elementos a los extremos
     justify-content: center; 
-    // Alinea verticalmente
+    // alinea verticalmente
     align-items: center; 
     text-align: center;
     position: fixed;
@@ -14,11 +14,11 @@ footer {
     z-index: 10;
     background-color: $azulClaro;
     color: $negro;
-    padding: 0.5rem; // Reduce el espacio interior
-    .footerContent {
+    padding: 0.5rem;
+   .footerContent {
         display: flex;
-        align-items: center; // Alinea texto y logo
-        gap: 0.5rem; // Reduce la separación entre ellos
+         align-items: center; // alinea texto y logo
+        gap: 0.5rem; // reduce la separación entre ellos
     }
 
     p {
