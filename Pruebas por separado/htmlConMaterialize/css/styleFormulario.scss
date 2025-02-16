@@ -23,7 +23,6 @@ body {
 
     .input-field {
         margin-bottom: 20px;
-
         input,
         textarea,
         select {
@@ -37,7 +36,6 @@ body {
         background-color: $azulOscuroBoton;
         color: $blanco;
         width: 100%;
-    
         &:hover {
             background-color: darken($azulOscuroBoton, 10%);
         }
