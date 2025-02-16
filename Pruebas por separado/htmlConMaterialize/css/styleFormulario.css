@@ -7,33 +7,22 @@ header {
   align-items: center;
   width: 100%;
 }
-
-a {
+header a {
   text-decoration: none;
 }
-
-.h1Header, .pHeader {
+header .h1Header, header .pHeader {
   font-family: "Kalam";
 }
-
-.cabecera {
+header .cabecera {
   display: flex;
   align-items: center;
 }
-
-.cabecera_izquierda {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.cabecera_derecha {
+header .cabecera_izquierda, header .cabecera_derecha {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
-
-.fotoPerfil {
+header .fotoPerfil {
   background-image: url("../img/fotoPerfil.jpg");
   width: 80px;
   height: 80px;
@@ -41,8 +30,7 @@ a {
   background-position: center;
   border-radius: 50%;
 }
-
-.logo {
+header .logo {
   background-image: url("../img/logoTrabajoDIW.jpg");
   width: 60px;
   height: 60px;
@@ -50,7 +38,6 @@ a {
   background-position: center;
   border-radius: 50%;
 }
-
 @media (max-width: 768px) {
   header {
     flex-direction: row;
@@ -59,24 +46,25 @@ a {
     gap: 1rem;
     flex-wrap: nowrap;
   }
-  .cabecera {
+  header .cabecera {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
     flex-wrap: nowrap;
   }
-  .cabecera_izquierda, .cabecera_derecha {
+  header .cabecera_izquierda, header .cabecera_derecha {
     flex-direction: row;
     align-items: center;
     gap: 1rem;
     flex-wrap: nowrap;
   }
-  .fotoPerfil {
+  header .fotoPerfil {
     width: 80px;
     height: 80px;
   }
 }
+
 footer {
   display: flex;
   justify-content: center;
@@ -126,35 +114,29 @@ body {
   background: #FFFFFF;
   border-radius: 10px;
 }
-
-h3 {
+.container h3 {
   color: #001F54;
 }
-
-.input-field {
+.container .input-field {
   margin-bottom: 20px;
 }
-
-.input-field input,
-.input-field textarea,
-.input-field select {
+.container .input-field input,
+.container .input-field textarea,
+.container .input-field select {
   border-bottom: 2px solid #001F54;
 }
-
-.input-field label {
+.container .input-field label {
   color: #001F54;
 }
-
-.btn {
+.container .btn {
   background-color: #053D64;
   color: #FFFFFF;
   width: 100%;
 }
-.btn:hover {
+.container .btn:hover {
   background-color: #031f33;
 }
-
-p {
+.container p {
   color: #303030;
   font-size: 1.1em;
 }/*# sourceMappingURL=styleFormulario.css.map */

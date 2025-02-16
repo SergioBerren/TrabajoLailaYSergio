@@ -8,77 +8,71 @@ header {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-}
-
-a {
-    text-decoration: none;
-}
-
-.h1Header, .pHeader {
-    font-family: $kalam;
-}
-
-.cabecera {
-    display: flex;
-    align-items: center;
-}
-
-.cabecera_izquierda {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.cabecera_derecha {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.fotoPerfil {
-    background-image: $imagenFotoPerfil;
-    width: 80px;
-    height: 80px;
-    background-size: cover;
-    background-position: center;
-    border-radius: 50%;
-}
-
-.logo {
-    background-image: $imagenLogo;
-    width: 60px;
-    height: 60px;
-    background-size: cover;
-    background-position: center;
-    border-radius: 50%;
-}
-
-@media (max-width: 768px) {
-    header {
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        gap: 1rem; // Espaciado entre elementos
-        flex-wrap: nowrap;
+    a {
+        text-decoration: none;
     }
+    
+    .h1Header, .pHeader {
+        font-family: $kalam;
+    }
+    
     .cabecera {
-        flex-direction: row;
+        display: flex;
         align-items: center;
-        justify-content: space-between;
-        gap: 1rem;
-        flex-wrap: nowrap;
     }
-
-
-    .cabecera_izquierda, .cabecera_derecha {
-        flex-direction: row;
+    
+    .cabecera_izquierda ,.cabecera_derecha{
+        display: flex;
         align-items: center;
         gap: 1rem;
-        flex-wrap: nowrap;
     }
-
+    
     .fotoPerfil {
+        background-image: $imagenFotoPerfil;
         width: 80px;
         height: 80px;
+        background-size: cover;
+        background-position: center;
+        border-radius: 50%;
+    }
+    
+    .logo {
+        background-image: $imagenLogo;
+        width: 60px;
+        height: 60px;
+        background-size: cover;
+        background-position: center;
+        border-radius: 50%;
+    }
+    @media (max-width: 768px) {
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem; // Espaciado entre elementos
+            flex-wrap: nowrap;
+        
+        .cabecera {
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            flex-wrap: nowrap;
+        }
+    
+    
+        .cabecera_izquierda, .cabecera_derecha {
+            flex-direction: row;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: nowrap;
+        }
+    
+        .fotoPerfil {
+            width: 80px;
+            height: 80px;
+        }
     }
 }
+
+
+
