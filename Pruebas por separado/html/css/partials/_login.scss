@@ -4,7 +4,6 @@ body {
     background-image: $imagenFondo;
     background-repeat: no-repeat; // Así haces que la imagen no se repita
     background-size: cover; // Al usar el no repeat se queda muy pequeña, con esta propiedad la ajustas al tamaño de la pantalla
-    //leila
     background-position: center;
     min-height: 100vh;
     display: flex;
@@ -16,7 +15,6 @@ body {
 .contenedorLogin {
     background-color: $azulClaro;
     border-radius: 20px;
-    //modificacion leila 
     width: 90%;
     max-width: 400px;
     padding: 20px;

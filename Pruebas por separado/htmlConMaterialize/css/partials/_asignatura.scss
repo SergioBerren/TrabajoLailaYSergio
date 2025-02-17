@@ -3,3 +3,106 @@
 .contenedorAsignatura {
     background-color: $verdeClaro;
 }
+
+/* Estilo para el contenedor principal */
+.contenedorAsignatura {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilos para la sección de los temas */
+.tema1 {
+    width: 80%;
+    max-width: 800px;
+    margin-top: 30px;
+
+    h5 {
+        font-size: 1.5rem;
+        color: #0277BD;
+        margin-bottom: 20px;
+    }
+
+    .tarjeta {
+        margin-bottom: 20px;
+
+        .contenido-tarjeta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #f1f1f1;
+            border-radius: 8px;
+
+            .titulo-tarjeta {
+                font-size: 1.1rem;
+                color: #555;
+            }
+
+            button {
+                background-color: #2196F3;
+                color: white;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 5px;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: #1976D2;
+                }
+            }
+
+            .btn-small {
+                background-color: #0277BD;
+                padding: 10px 15px;
+                color: white;
+                border-radius: 5px;
+                text-decoration: none;
+
+                &:hover {
+                    background-color: #01579B;
+                }
+            }
+        }
+    }
+}
+
+/* Calendario */
+.calendario {
+    width: 100%;
+    margin-top: 20px;
+}
+
+/*
+button, 
+.btn-small {
+    display: flex;
+    justify-content: center; // Centra horizontalmente
+    align-items: center; // Centra verticalmente
+    text-align: center; // Asegura el centrado del texto
+    width: auto; // O un ancho fijo si lo prefieres
+    height: 40px; // Ajusta según el diseño
+}
+*/
+
+.centrarBtn {
+    display: flex;
+    justify-content: center; // Centra horizontalmente
+    align-items: center; // Centra verticalmente
+    text-align: center; // Asegura el centrado del texto
+    width: 25%; // O un ancho fijo si lo prefieres
+    height: 40px; // Ajusta según el diseño
+}
+
+.columna-principal{
+    h3{
+        display: inline;
+    }
+}
+
+body {
+    background-image: $imagenFondo;
+    background-repeat: no-repeat; // Así haces que la imagen no se repita
+    background-size: cover; // Al usar el no repeat se queda muy pequeña, con esta propiedad la ajustas al tamaño de la pantalla
+}
