@@ -100,37 +100,77 @@ footer .logoFooter {
 }
 
 body {
-  background-image: url("../img/estrellitas.jpg");
-  background-size: cover;
-  background-attachment: fixed;
-  font-family: "Kalam";
+  background-color: #f5f7fa;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-iframe {
-  display: block;
-  margin: 20px auto;
-  max-width: 100%;
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+.titulo {
+  color: #263238;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.video-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.video-container iframe {
+  width: 100%;
+  max-width: 700px;
+  height: 350px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .tema-container {
-  background-color: #A8C3A5;
-  padding: 20px;
+  background-color: #ffffff;
+  padding: 15px;
   border-radius: 10px;
-  box-shadow: #303030;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  cursor: pointer;
 }
-
-h3 {
-  color: #FFFFFF;
-  text-align: center;
+.tema-container:hover {
+  background-color: #d5e9fa;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
-
-h5 {
-  color: #303030;
+.tema-container a {
+  text-decoration: none;
+  color: #263238;
+  display: flex;
+  align-items: center;
+  width: 100%;
 }
-
-.responsive-img {
-  width: 250px;
-  height: 150px;
-  display: block;
-  margin: 0 auto;
+.tema-container h5 {
+  font-weight: bold;
+  font-size: 18px;
+  margin: 0;
+  flex-grow: 1;
+}
+.tema-container .tema-icon {
+  font-size: 24px;
+  color: #1e88e5;
+}
+.tema-container img {
+  width: 50px;
+  height: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 5px;
+  margin-left: 15px;
 }/*# sourceMappingURL=styleTemas.css.map */

@@ -6,28 +6,40 @@
     <title>Astrofísica</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styleTemas.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
+
     <div class="container">
-        <h3 class="white-text center-align">Astrofísica</h3>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/LGIffUnJvsU?si=mnh_QJ7oUAmehqBT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <div class="section" >
-            <div class="tema-container" >
-                <a href="asignatura.html">
-                    <h5>Tema 1</h5>
-                    <img src="img/noticia3.avif" class="responsive-img">
-                </a>
-            </div>
+        <h3 class="titulo">Astrofísica</h3>
+
+        <!-- Video -->
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/LGIffUnJvsU?si=mnh_QJ7oUAmehqBT" 
+                title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+                encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen>
+            </iframe>
         </div>
-        
-        <div class="section" >
-            <div class="tema-container" >
-                <a href="asignatura.html">
-                    <h5>Tema 2</h5>
-                    <img src="img/fyeg.jpg"  class="responsive-img">
-                </a>
-            </div>
+
+        <!-- Sección de Temas -->
+        <div class="tema-container">
+            <a href="asignatura.html">
+                <h5>Tema 1</h5>
+                <img src="img/noticia3.avif" class="responsive-img">
+                <i class="fas fa-arrow-right tema-icon"></i>
+            </a>
         </div>
+
+        <div class="tema-container">
+            <a href="asignatura.html">
+                <h5>Tema 2</h5>
+                <img src="img/fyeg.jpg" class="responsive-img">
+                <i class="fas fa-arrow-right tema-icon"></i>
+            </a>
+        </div>
+
     </div>
+
 </body>
 </html>

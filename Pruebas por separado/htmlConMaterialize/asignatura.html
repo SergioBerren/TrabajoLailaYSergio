@@ -9,6 +9,7 @@
     <!-- Estilos personalizados -->
     <link rel="stylesheet" href="css/styleAsignatura.css">
     <link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet">
+    <script src="js/sonidoEstrellas.js" defer></script>
 </head>
 <body>
     <!-- Encabezado -->
@@ -28,7 +29,7 @@
             <div class="titulo">
                 <h3>Formación y Evolución de las Galaxias</h3>
             </div>
-
+            <audio id="audioIntro" src="./sonido/estrellas.mp3" autoplay muted></audio>
             <!-- Video Inicial -->
             <div class="videoInicial">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/vFMpc3nmCRQ?si=qRiapofY1hPiFTFV"
@@ -95,8 +96,6 @@
             </div>
         </div>
     </div>
-
-    <audio src="./sonido/estrellas.mp3" controls></audio>
 
     <footer class="footer">
         <p>IES Laila y Sergio - Comunidad de Madrid</p>
