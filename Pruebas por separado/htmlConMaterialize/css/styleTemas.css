@@ -6,6 +6,8 @@ header {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  position: sticky;
+  top: 0;
 }
 header a {
   text-decoration: none;
@@ -101,6 +103,8 @@ footer .logoFooter {
 
 body {
   background-image: url("../img/estrellitas.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   font-family: "Roboto", sans-serif;
   margin: 0;
   padding: 0;
