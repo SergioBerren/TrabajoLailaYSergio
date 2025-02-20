@@ -31,11 +31,14 @@ body {
 .video-container {
     display: flex;
     justify-content: center;
+    align-items: center;
+    margin: 0 auto;
     margin-bottom: 20px;
 
     iframe {
-        width: 100%;
+        width: 80%;
         max-width: 700px;
+        display: block;
         height: 350px;
         border-radius: 8px;
         box-shadow: 0px 4px 10px $negro;
