@@ -135,17 +135,10 @@ header .logo {
   margin-top: 20px;
 }
 
-/*
-button, 
-.btn-small {
-    display: flex;
-    justify-content: center; // Centra horizontalmente
-    align-items: center; // Centra verticalmente
-    text-align: center; // Asegura el centrado del texto
-    width: auto; // O un ancho fijo si lo prefieres
-    height: 40px; // Ajusta según el diseño
+h3, h5 {
+  color: #A8C3A5;
 }
-*/
+
 .centrarBtn {
   display: flex;
   justify-content: center;
@@ -155,8 +148,8 @@ button,
   height: 40px;
 }
 
-.columna-principal h3 {
-  display: inline;
+a {
+  color: black;
 }
 
 body {

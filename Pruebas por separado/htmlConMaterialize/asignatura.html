@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet">
     <script src="js/sonidoEstrellas.js" defer></script>
 </head>
-<body class="blue-grey lighten-5">
+<body>
 
     <!-- Encabezado -->
     <header class="cabecera">
@@ -25,19 +25,23 @@
     </header>
 
     <div class="container">
+        <audio id="audioIntro" src="sonido/estrellas.mp3"></audio>
         <div class="row center-align">
             
             <!-- Contenido principal -->
             <section class="col s12">
                 <h3 class="center-align">Formación y Evolución de las Galaxias</h3>
                 
-                <!-- Video inicial -->
-                <div class="video-container">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/vFMpc3nmCRQ"
-                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-                    </iframe>
+                <!-- Video inicial más pequeño y centrado -->
+                <div class="row">
+                    <div class="col s12 m8 l6 offset-m2 offset-l3">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/vFMpc3nmCRQ"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
                 </div>
-
                 <!-- Sección de recursos -->
                 <h5>Introducción</h5>
                 <div class="row">
@@ -52,8 +56,8 @@
                     <div class="col s12 m6">
                         <div class="card">
                             <div class="card-content">
-                                <span class="card-title">Video</span>
-                                <a href="https://www.youtube.com/watch?v=MiIBM1uFSxg" target="_blank" class="btn">Ver video</a>
+                                <span class="card-title">Vídeo</span>
+                                <a href="https://www.youtube.com/watch?v=MiIBM1uFSxg" target="_blank" class="btn">Ver vídeo</a>
                             </div>
                         </div>
                     </div>
@@ -82,10 +86,14 @@
 
                 <!-- Calendario -->
                 <h3 class="center-align">Calendario Interactivo</h3>
-                <div class="video-container">
-                    <iframe src="https://www.google.com/calendar/embed?src=your-calendar-id&ctz=America%2FNew_York"
-                        width="800" height="600" frameborder="0" scrolling="no">
-                    </iframe>
+                <div class="row">
+                    <div class="col s12 m10 l8 offset-m1 offset-l2">
+                        <div class="video-container">
+                            <iframe src="https://www.google.com/calendar/embed?src=your-calendar-id&ctz=America%2FNew_York"
+                                width="800" height="600" frameborder="0" scrolling="no">
+                            </iframe>
+                        </div>
+                    </div>
                 </div>
             </section>
         </div>
