@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Astrofisica - Página inicial</title>
+    <title>Astrofísica - Página inicial</title>
     <!-- Enlace a Materialize CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <!-- Estilos personalizados -->
     <link rel="stylesheet" href="css/styleAsignatura.css">
     <link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet">
     <script src="js/sonidoEstrellas.js" defer></script>
 </head>
-<body>
+<body class="blue-grey lighten-5">
+
     <!-- Encabezado -->
     <header class="cabecera">
         <div class="cabecera_izquierda">
@@ -24,79 +24,74 @@
         </div>
     </header>
 
-    <div class="contenedorAsignatura">
-        <div class="columna-principal">
-            <div class="titulo">
-                <h3>Formación y Evolución de las Galaxias</h3>
-            </div>
-            <audio id="audioIntro" src="./sonido/estrellas.mp3" autoplay muted></audio>
-            <!-- Video Inicial -->
-            <div class="videoInicial">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/vFMpc3nmCRQ?si=qRiapofY1hPiFTFV"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
+    <div class="container">
+        <div class="row center-align">
+            
+            <!-- Contenido principal -->
+            <section class="col s12">
+                <h3 class="center-align">Formación y Evolución de las Galaxias</h3>
+                
+                <!-- Video inicial -->
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/vFMpc3nmCRQ"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                    </iframe>
+                </div>
 
-            <!-- PDF Link 1 -->
-            <div class="Link1">
-                <div class="tarjeta">
-                    <div class="contenido-tarjeta">
-                        <span class="titulo-tarjeta">PDF dado en la primera clase</span>
-                        <button class="btn-small"> Hecho</button>
+                <!-- Sección de recursos -->
+                <h5>Introducción</h5>
+                <div class="row">
+                    <div class="col s12 m6">
+                        <div class="card">
+                            <div class="card-content">
+                                <span class="card-title">PDF de la primera clase</span>
+                                <button class="btn waves-effect waves-light">Hecho</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m6">
+                        <div class="card">
+                            <div class="card-content">
+                                <span class="card-title">Video</span>
+                                <a href="https://www.youtube.com/watch?v=MiIBM1uFSxg" target="_blank" class="btn">Ver video</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Enlace de Video -->
-            <div class="enlaceVideo">
-                <div class="tarjeta">
-                    <div class="contenido-tarjeta">
-                        <span class="titulo-tarjeta">Video</span>
-                        <a href="https://www.youtube.com/watch?si=lrRtfboZLMDb3Lh5&v=MiIBM1uFSxg&feature=youtu.be"
-                            target="_blank" class="btn-small">Ver video</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Tema 1 -->
-            <div class="tema1">
+                <!-- Tema 1 -->
                 <h5>Tema 1</h5>
-
-                <!-- PDF Link 2 -->
-                <div class="tarjeta">
-                    <div class="contenido-tarjeta">
-                        <span class="titulo-tarjeta">Ejercicios (Temas 1-2-3-4)</span>
-                        <a href="/Pruebas por separado/html/wuolah-free-Entregable-1.pdf" class="btn-small centrarBtn">Descargar
-                            PDF</a>
+                <div class="row">
+                    <div class="col s12 m6">
+                        <div class="card">
+                            <div class="card-content">
+                                <span class="card-title">Ejercicios (Temas 1-2-3-4)</span>
+                                <a href="/Pruebas/html/wuolah-free-Entregable-1.pdf" class="btn">Descargar PDF</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m6">
+                        <div class="card">
+                            <div class="card-content">
+                                <a href="formulario.html" class="card-title">Formulario Autoevaluación</a>
+                                <button class="btn">Hecho</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Formulario Autoevaluación -->
-                <div class="tarjeta">
-                    <div class="contenido-tarjeta">
-                        <a href="formulario.html">
-                            <span class="titulo-tarjeta">Formulario Autoevaluación del curso</span>
-                        </a>
-                        <button class="btn-small centrarBtn"> Hecho</button>
-                    </div>
+                <!-- Calendario -->
+                <h3 class="center-align">Calendario Interactivo</h3>
+                <div class="video-container">
+                    <iframe src="https://www.google.com/calendar/embed?src=your-calendar-id&ctz=America%2FNew_York"
+                        width="800" height="600" frameborder="0" scrolling="no">
+                    </iframe>
                 </div>
-            </div>
-
-            <!-- Calendario -->
-            <div class="row">
-                <!-- Calendario alineado a la izquierda -->
-                <div class="col s12 m8 l6">
-                    <h3 class="center-align">Calendario Interactivo</h3>
-                    <div class="calendario">
-                        <iframe src="https://www.google.com/calendar/embed?src=your-calendar-id&ctz=America%2FNew_York"
-                            width="800" height="600" frameborder="0" scrolling="no"></iframe>
-                    </div>
-                </div>
-            </div>
+            </section>
         </div>
     </div>
 
+    <!-- Footer -->
     <footer class="footer">
         <p>IES Laila y Sergio - Comunidad de Madrid</p>
         <div class="logoFooter"></div>

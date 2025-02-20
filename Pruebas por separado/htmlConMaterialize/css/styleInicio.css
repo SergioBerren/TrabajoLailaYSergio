@@ -163,11 +163,10 @@ html, body {
 }
 
 .menuLateral {
-  width: 20%;
   background-color: #9BB3B8;
-  padding: 15px;
   border-radius: 8px;
   margin-right: 20px;
+  height: 100%;
   overflow-y: auto;
   scrollbar-width: none;
 }
@@ -185,7 +184,7 @@ html, body {
 }
 
 .divAsignaturas {
-  width: 80%;
+  width: 100%;
   height: 100%;
   background-color: #A8C3A5;
   padding: 20px;
