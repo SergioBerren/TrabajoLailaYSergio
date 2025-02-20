@@ -15,7 +15,7 @@ header a {
   text-decoration: none;
 }
 header .h1Header, header .pHeader {
-  font-family: "Kalam";
+  font-family: "sans-serif";
 }
 header .cabecera {
   display: flex;
@@ -69,95 +69,121 @@ header .logo {
   }
 }
 
+/*@import '../Comun/_variables.scss';
+
+/* Estilo para el contenedor principal 
 .contenedorAsignatura {
-  background-color: #A8C3A5;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+/* Calendario 
+.calendario {
+    width: 100%;
+    margin-top: 20px;
+}
+
+h3, h5 {
+    color: $verdeClaro;
+    font-family: $univa;
+
+}
+
+.centrarBtn {
+    display: flex;
+    justify-content: center; // Centra horizontalmente
+    align-items: center; // Centra verticalmente
+    text-align: center; // Asegura el centrado del texto
+    width: 25%; // O un ancho fijo si lo prefieres
+    height: 40px; // Ajusta según el diseño
+}
+
+a {
+    color: black;
+}
+
+body {
+    background-image: $imagenFondo;
+    background-repeat: no-repeat; // Así haces que la imagen no se repita
+    background-size: cover; // Al usar el no repeat se queda muy pequeña, con esta propiedad la ajustas al tamaño de la pantalla
+}
+*/
 /* Estilo para el contenedor principal */
 .contenedorAsignatura {
   margin: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-/* Estilos para la sección de los temas */
-.tema1 {
-  width: 80%;
-  max-width: 800px;
-  margin-top: 30px;
-}
-.tema1 h5 {
-  font-size: 1.5rem;
-  color: #0277BD;
-  margin-bottom: 20px;
-}
-.tema1 .tarjeta {
-  margin-bottom: 20px;
-}
-.tema1 .tarjeta .contenido-tarjeta {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  background-color: #f1f1f1;
-  border-radius: 8px;
-}
-.tema1 .tarjeta .contenido-tarjeta .titulo-tarjeta {
-  font-size: 1.1rem;
-  color: #555;
-}
-.tema1 .tarjeta .contenido-tarjeta button {
-  background-color: #2196F3;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-.tema1 .tarjeta .contenido-tarjeta button:hover {
-  background-color: #1976D2;
-}
-.tema1 .tarjeta .contenido-tarjeta .btn-small {
-  background-color: #0277BD;
-  padding: 10px 15px;
-  color: white;
-  border-radius: 5px;
-  text-decoration: none;
-}
-.tema1 .tarjeta .contenido-tarjeta .btn-small:hover {
-  background-color: #01579B;
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
 }
 
 /* Calendario */
 .calendario {
   width: 100%;
   margin-top: 20px;
+  max-width: 800px;
 }
 
 h3, h5 {
   color: #A8C3A5;
+  font-weight: bold;
+  font-family: "sans-serif";
 }
 
+/* Botón centrado */
 .centrarBtn {
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   width: 25%;
+  min-width: 150px;
   height: 40px;
 }
 
+/* Links */
 a {
   color: black;
 }
 
+/* Fondo responsive */
 body {
   background-image: url("../img/estrellitas.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
 }
 
+/* Responsividad */
+@media (max-width: 1024px) {
+  .contenedorAsignatura {
+    width: 95%;
+  }
+  .centrarBtn {
+    width: 50%;
+  }
+}
+@media (max-width: 768px) {
+  .contenedorAsignatura {
+    width: 100%;
+  }
+  .centrarBtn {
+    width: 70%;
+  }
+  h3, h5 {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 480px) {
+  .centrarBtn {
+    width: 90%;
+    height: 50px;
+  }
+}
 footer {
   display: flex;
   justify-content: center;
@@ -180,7 +206,7 @@ footer .footerContent {
 footer p {
   margin: 0;
   padding: 0.5rem;
-  font-family: "Kalam";
+  font-family: "sans-serif";
 }
 footer .logoFooter {
   margin-left: 400px;

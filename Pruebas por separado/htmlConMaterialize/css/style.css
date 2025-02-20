@@ -30,7 +30,7 @@ body {
 .waves-effect.btn {
   background-color: #053D64;
   border-radius: 20px;
-  font-family: "Kalam";
+  font-family: "sans-serif";
   margin-right: auto;
   margin-left: auto;
   padding: 10px;
@@ -90,21 +90,25 @@ body {
   background-color: #9BB3B8;
 }
 
+h4 {
+  font-family: "sans-serif";
+}
+
 .input-field {
   background-color: #DDD7D7;
   border-radius: 15px;
-  font-family: "Kalam";
+  font-family: "sans-serif";
 }
 
 .input-field input::-moz-placeholder {
-  font-family: "Kalam";
+  font-family: "sans-serif";
   color: #000000;
   text-indent: 20px; /* Ajusta el valor para mover más o menos */
   opacity: 0.7;
 }
 
 .input-field input::placeholder {
-  font-family: "Kalam";
+  font-family: "sans-serif";
   color: #000000;
   text-indent: 20px; /* Ajusta el valor para mover más o menos */
   opacity: 0.7;
@@ -112,7 +116,7 @@ body {
 
 input:not([type]), input[type=text]:not(.browser-default), input[type=password]:not(.browser-default), input[type=email]:not(.browser-default), input[type=url]:not(.browser-default), input[type=time]:not(.browser-default), input[type=date]:not(.browser-default), input[type=datetime]:not(.browser-default), input[type=datetime-local]:not(.browser-default), input[type=tel]:not(.browser-default), input[type=number]:not(.browser-default), input[type=search]:not(.browser-default), textarea.materialize-textarea {
   border-bottom: none;
-  font-family: "Kalam";
+  font-family: "sans-serif";
 }
 
 .password-field {

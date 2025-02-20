@@ -14,7 +14,7 @@ header a {
   text-decoration: none;
 }
 header .h1Header, header .pHeader {
-  font-family: "Kalam";
+  font-family: "sans-serif";
 }
 header .cabecera {
   display: flex;
@@ -68,43 +68,9 @@ header .logo {
   }
 }
 
-footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  z-index: 10;
-  background-color: #9BB3B8;
-  color: #000000;
-  padding: 0.5rem;
-}
-footer .footerContent {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-footer p {
-  margin: 0;
-  padding: 0.5rem;
-  font-family: "Kalam";
-}
-footer .logoFooter {
-  margin-left: 400px;
-  width: 50px;
-  height: 50px;
-  background-image: url("../img/logoFooter.jpg");
-  background-size: cover;
-  background-position: center;
-  border-radius: 50%;
-}
-
 body {
   color: #000000;
-  font-family: "Kalam";
+  font-family: "sans-serif";
   background-image: url("../img/estrellitas.jpg");
   background-size: cover;
   background-position: center;
@@ -120,6 +86,7 @@ body {
 }
 .container h3 {
   color: #001F54;
+  font-family: "sans-serif";
 }
 .container .input-field {
   margin-bottom: 20px;
@@ -143,4 +110,38 @@ body {
 .container p {
   color: #303030;
   font-size: 1.1em;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  background-color: #9BB3B8;
+  color: #000000;
+  padding: 0.5rem;
+}
+footer .footerContent {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+footer p {
+  margin: 0;
+  padding: 0.5rem;
+  font-family: "sans-serif";
+}
+footer .logoFooter {
+  margin-left: 400px;
+  width: 50px;
+  height: 50px;
+  background-image: url("../img/logoFooter.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
 }/*# sourceMappingURL=styleFormulario.css.map */

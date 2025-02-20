@@ -34,7 +34,7 @@ body {
 .waves-effect.btn {
     background-color: $azulOscuroBoton;
     border-radius: 20px;
-    font-family: $kalam;
+    font-family: $univa;
     margin-right: auto;
     margin-left: auto;
     padding: 10px;
@@ -103,15 +103,19 @@ body {
     background-color: $azulClaro;
 }
 
+h4{
+    font-family: $univa;
+}
+
 .input-field {
     background-color: $grisClaro;
     border-radius: 15px;
-    font-family: $kalam;
+    font-family: $univa;
 }
 
 // Personalizar el placeholder
 .input-field input::placeholder {
-    font-family: $kalam;
+    font-family: $univa;
     color: $negro;
     text-indent: 20px; /* Ajusta el valor para mover más o menos */
     opacity: 0.7; // Un poco más tenue para diferenciarlo del texto ingresado
@@ -119,7 +123,7 @@ body {
 
 input:not([type]), input[type=text]:not(.browser-default), input[type=password]:not(.browser-default), input[type=email]:not(.browser-default), input[type=url]:not(.browser-default), input[type=time]:not(.browser-default), input[type=date]:not(.browser-default), input[type=datetime]:not(.browser-default), input[type=datetime-local]:not(.browser-default), input[type=tel]:not(.browser-default), input[type=number]:not(.browser-default), input[type=search]:not(.browser-default), textarea.materialize-textarea  {
     border-bottom: none;
-    font-family: $kalam;
+    font-family: $univa;
 }
 
 // Estilo para el icono del ojo

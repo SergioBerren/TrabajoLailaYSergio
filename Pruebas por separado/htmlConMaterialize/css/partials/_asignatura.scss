@@ -1,10 +1,6 @@
-@import '../Comun/_variables.scss';
+/*@import '../Comun/_variables.scss';
 
-.contenedorAsignatura {
-    background-color: $verdeClaro;
-}
-
-/* Estilo para el contenedor principal */
+/* Estilo para el contenedor principal 
 .contenedorAsignatura {
     margin: 20px;
     display: flex;
@@ -12,63 +8,7 @@
     align-items: center;
 }
 
-/* Estilos para la sección de los temas */
-.tema1 {
-    width: 80%;
-    max-width: 800px;
-    margin-top: 30px;
-
-    h5 {
-        font-size: 1.5rem;
-        color: #0277BD;
-        margin-bottom: 20px;
-    }
-
-    .tarjeta {
-        margin-bottom: 20px;
-
-        .contenido-tarjeta {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px;
-            background-color: #f1f1f1;
-            border-radius: 8px;
-
-            .titulo-tarjeta {
-                font-size: 1.1rem;
-                color: #555;
-            }
-
-            button {
-                background-color: #2196F3;
-                color: white;
-                border: none;
-                padding: 10px 20px;
-                border-radius: 5px;
-                cursor: pointer;
-
-                &:hover {
-                    background-color: #1976D2;
-                }
-            }
-
-            .btn-small {
-                background-color: #0277BD;
-                padding: 10px 15px;
-                color: white;
-                border-radius: 5px;
-                text-decoration: none;
-
-                &:hover {
-                    background-color: #01579B;
-                }
-            }
-        }
-    }
-}
-
-/* Calendario */
+/* Calendario 
 .calendario {
     width: 100%;
     margin-top: 20px;
@@ -76,6 +16,8 @@
 
 h3, h5 {
     color: $verdeClaro;
+    font-family: $univa;
+
 }
 
 .centrarBtn {
@@ -95,4 +37,87 @@ body {
     background-image: $imagenFondo;
     background-repeat: no-repeat; // Así haces que la imagen no se repita
     background-size: cover; // Al usar el no repeat se queda muy pequeña, con esta propiedad la ajustas al tamaño de la pantalla
+}
+*/
+
+@import '../Comun/_variables.scss';
+
+/* Estilo para el contenedor principal */
+.contenedorAsignatura {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%; // Evita que sea demasiado ancho en pantallas grandes
+    max-width: 1200px; // Máximo tamaño en pantallas grandes
+    margin: auto;
+}
+
+/* Calendario */
+.calendario {
+    width: 100%;
+    margin-top: 20px;
+    max-width: 800px; // Limita el tamaño en pantallas grandes
+}
+
+h3, h5 {
+    color: $verdeClaro;
+    font-weight: bold;
+    font-family: $univa;
+}
+
+/* Botón centrado */
+.centrarBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 25%;
+    min-width: 150px; // Asegura que no sea demasiado pequeño en móviles
+    height: 40px;
+}
+
+/* Links */
+a {
+    color: black;
+}
+
+/* Fondo responsive */
+body {
+    background-image: $imagenFondo;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; // Mantiene la imagen fija al hacer scroll
+}
+
+/* Responsividad */
+@media (max-width: 1024px) {
+    .contenedorAsignatura {
+        width: 95%;
+    }
+
+    .centrarBtn {
+        width: 50%; // Más ancho en tabletas
+    }
+}
+
+@media (max-width: 768px) {
+    .contenedorAsignatura {
+        width: 100%;
+    }
+
+    .centrarBtn {
+        width: 70%; // Botón más grande en móviles
+    }
+
+    h3, h5 {
+        font-size: 1.5rem; // Reduce el tamaño del texto
+    }
+}
+
+@media (max-width: 480px) {
+    .centrarBtn {
+        width: 90%;
+        height: 50px; // Más alto para ser más fácil de tocar en móviles
+    }
 }

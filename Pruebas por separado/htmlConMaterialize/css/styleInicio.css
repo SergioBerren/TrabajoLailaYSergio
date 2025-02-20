@@ -1,6 +1,4 @@
 @charset "UTF-8";
-@import 'https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css';
-@import url("https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css");
 header {
   background-color: #9BB3B8;
   padding: 1rem;
@@ -17,7 +15,7 @@ header a {
   text-decoration: none;
 }
 header .h1Header, header .pHeader {
-  font-family: "Kalam";
+  font-family: "sans-serif";
 }
 header .cabecera {
   display: flex;
@@ -69,40 +67,6 @@ header .logo {
     width: 80px;
     height: 80px;
   }
-}
-
-footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  z-index: 10;
-  background-color: #9BB3B8;
-  color: #000000;
-  padding: 0.5rem;
-}
-footer .footerContent {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-footer p {
-  margin: 0;
-  padding: 0.5rem;
-  font-family: "Kalam";
-}
-footer .logoFooter {
-  margin-left: 400px;
-  width: 50px;
-  height: 50px;
-  background-image: url("../img/logoFooter.jpg");
-  background-size: cover;
-  background-position: center;
-  border-radius: 50%;
 }
 
 body {
@@ -157,9 +121,12 @@ html, body {
   background-image: url("../img/estrellitas.jpg");
   background-size: cover;
   padding: 20px;
-  font-family: "Kalam", cursive;
+  font-family: "sans-serif";
   display: flex;
-  height: 76%;
+  height: 100%;
+}
+.contenedorInicio .menuLateral, .contenedorInicio .divAsignaturas {
+  height: 75%;
 }
 
 .menuLateral {
@@ -175,12 +142,16 @@ html, body {
   color: #001F54;
   margin-bottom: 15px;
 }
-
 .menuLateral .noticia {
   width: 100%;
   height: auto;
   margin-bottom: 10px;
   border-radius: 5px;
+}
+
+p {
+  color: black;
+  font-size: 20px;
 }
 
 .divAsignaturas {
@@ -192,33 +163,9 @@ html, body {
   overflow-y: auto;
   scrollbar-width: none;
 }
-
 .divAsignaturas h2 {
   color: #001F54;
   margin-bottom: 20px;
-}
-
-.aula a {
-  text-decoration: none;
-  color: #000000;
-}
-
-.aula a div {
-  background-color: #FFFFFF;
-  padding: 10px;
-  border-radius: 8px;
-  text-align: center;
-}
-
-.aula a div img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
-
-.aula a div p {
-  margin-top: 10px;
-  font-size: 16px;
 }
 
 .card-image img {
@@ -227,4 +174,38 @@ html, body {
   -o-object-fit: cover;
      object-fit: cover; /* Recorta la imagen para llenar el espacio sin deformarla */
   border-radius: 5px; /* Opcional: esquinas redondeadas */
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  background-color: #9BB3B8;
+  color: #000000;
+  padding: 0.5rem;
+}
+footer .footerContent {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+footer p {
+  margin: 0;
+  padding: 0.5rem;
+  font-family: "sans-serif";
+}
+footer .logoFooter {
+  margin-left: 400px;
+  width: 50px;
+  height: 50px;
+  background-image: url("../img/logoFooter.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
 }/*# sourceMappingURL=styleInicio.css.map */

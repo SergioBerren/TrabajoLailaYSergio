@@ -1,4 +1,4 @@
-@import '../Comun/_variables.scss';
+@import './_variables.scss';
 
 header {
     background-color: $azulClaro;
@@ -16,7 +16,7 @@ header {
     }
     
     .h1Header, .pHeader {
-        font-family: $kalam;
+        font-family: $univa;
     }
     
     .cabecera {
