@@ -1,45 +1,3 @@
-/*@import '../Comun/_variables.scss';
-
-/* Estilo para el contenedor principal 
-.contenedorAsignatura {
-    margin: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* Calendario 
-.calendario {
-    width: 100%;
-    margin-top: 20px;
-}
-
-h3, h5 {
-    color: $verdeClaro;
-    font-family: $univa;
-
-}
-
-.centrarBtn {
-    display: flex;
-    justify-content: center; // Centra horizontalmente
-    align-items: center; // Centra verticalmente
-    text-align: center; // Asegura el centrado del texto
-    width: 25%; // O un ancho fijo si lo prefieres
-    height: 40px; // Ajusta según el diseño
-}
-
-a {
-    color: black;
-}
-
-body {
-    background-image: $imagenFondo;
-    background-repeat: no-repeat; // Así haces que la imagen no se repita
-    background-size: cover; // Al usar el no repeat se queda muy pequeña, con esta propiedad la ajustas al tamaño de la pantalla
-}
-*/
-
 @import '../Comun/_variables.scss';
 
 /* Estilo para el contenedor principal */
@@ -61,7 +19,7 @@ body {
 }
 
 h3, h5 {
-    color: $verdeClaro;
+    color: $blanco;
     font-weight: bold;
     font-family: $univa;
 }

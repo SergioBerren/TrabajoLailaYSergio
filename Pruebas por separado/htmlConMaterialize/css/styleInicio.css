@@ -180,6 +180,16 @@ p {
   border-radius: 5px; /* Opcional: esquinas redondeadas */
 }
 
+.borde {
+  border: 2px solid #000000;
+  background-color: #FFFFFF;
+  border-radius: 5%;
+}
+
+.row {
+  margin-bottom: 20px;
+}
+
 footer {
   display: flex;
   justify-content: center;
