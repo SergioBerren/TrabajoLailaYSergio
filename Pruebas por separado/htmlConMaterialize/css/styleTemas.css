@@ -103,7 +103,8 @@ h3, h5 {
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  margin-bottom: 20px;
+  margin-bottom: 0 20px;
+  width: 100%;
 }
 .video-container iframe {
   width: 80%;
@@ -187,4 +188,19 @@ footer .logoFooter {
   background-size: cover;
   background-position: center;
   border-radius: 50%;
+}
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+  }
+  footer .footerContent {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+  footer .logoFooter {
+    margin: 0 auto;
+  }
 }/*# sourceMappingURL=styleTemas.css.map */

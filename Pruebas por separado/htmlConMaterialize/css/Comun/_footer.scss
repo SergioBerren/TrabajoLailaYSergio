@@ -17,7 +17,7 @@ footer {
     padding: 0.5rem;
    .footerContent {
         display: flex;
-         align-items: center; // alinea texto y logo
+        align-items: center; // alinea texto y logo
         gap: 0.5rem; // reduce la separación entre ellos
     }
 
@@ -35,5 +35,20 @@ footer {
         background-size: cover;
         background-position: center;
         border-radius: 50%;
+    }
+    @media (max-width: 768px) {
+        flex-direction: column;
+        justify-content: center;
+        padding: 1rem;
+
+        .footerContent {
+            flex-direction: column;
+            text-align: center;
+            gap: 0.5rem;
+        }
+
+        .logoFooter {
+            margin: 0 auto;
+        }
     }
 }

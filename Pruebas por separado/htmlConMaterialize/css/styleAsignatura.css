@@ -220,4 +220,19 @@ footer .logoFooter {
   background-size: cover;
   background-position: center;
   border-radius: 50%;
+}
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+  }
+  footer .footerContent {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+  footer .logoFooter {
+    margin: 0 auto;
+  }
 }/*# sourceMappingURL=styleAsignatura.css.map */
