@@ -3,8 +3,8 @@
 body {
     //background-color: $background-color;
     background-image: $imagenFondo;
-    background-repeat: no-repeat; // Así haces que la imagen no se repita
-    background-size: cover; // Al usar el no repeat se queda muy pequeña, con esta propiedad la ajustas al tamaño de la pantalla
+    background-repeat: no-repeat; 
+    background-size: cover; 
     font-family: $univa;
     margin: 0;
     padding: 0;
@@ -53,7 +53,6 @@ h3, h5 {
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0px 2px 6px $negro;
-    //transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     display: flex;
     align-items: center;
     justify-content: space-between;

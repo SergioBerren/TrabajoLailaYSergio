@@ -1,81 +1,78 @@
 @import '../Comun/_variables.scss';
 
-/* Estilo para el contenedor principal */
+body {
+    background-image: $imagenFondo;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; // mantiene la imagen fija al hacer scroll
+}
+
 .contenedorAsignatura {
     margin: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 90%; // Evita que sea demasiado ancho en pantallas grandes
-    max-width: 1200px; // Máximo tamaño en pantallas grandes
+    width: 90%; // evita que sea demasiado ancho en pantallas grandes
+    max-width: 1200px; // máximo tamaño en pantallas grandes
     margin: auto;
+
+    h3,
+    h5 {
+        color: white;
+        font-weight: bold;
+        font-family: $univa;
+    }
+
+    .calendario {
+        width: 100%;
+        margin-top: 20px;
+        max-width: 800px; // limita el tamaño en pantallas grandes
+    }
+
+    .centrarBtn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 25%;
+        min-width: 150px; // asegura que no sea demasiado pequeño en móviles
+        height: 40px;
+    }
+
+    a {
+        color: rgb(255, 255, 255);
+    }
+
+    @media (max-width: 1024px) {
+        width: 95%;
+
+        .centrarBtn {
+            width: 50%; // más ancho en tabletas
+        }
+    }
+
+    @media (max-width: 768px) {
+        width: 100%;
+
+
+        .centrarBtn {
+            width: 70%; // botón más grande en móviles
+        }
+
+        h3,
+        h5 {
+            font-size: 1.5rem; // reduce el tamaño del texto
+        }
+    }
+
+    @media (max-width: 480px) {
+        .centrarBtn {
+            width: 90%;
+            height: 50px; // más alto para ser más fácil de tocar en móviles
+        }
+    }
 }
 
-/* Calendario */
-.calendario {
-    width: 100%;
-    margin-top: 20px;
-    max-width: 800px; // Limita el tamaño en pantallas grandes
-}
 
-h3, h5 {
-    color: $blanco;
-    font-weight: bold;
-    font-family: $univa;
-}
-
-/* Botón centrado */
-.centrarBtn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 25%;
-    min-width: 150px; // Asegura que no sea demasiado pequeño en móviles
-    height: 40px;
-}
-
-/* Links */
-a {
-    color: black;
-}
-
-/* Fondo responsive */
-body {
-    background-image: $imagenFondo;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed; // Mantiene la imagen fija al hacer scroll
-}
 
 /* Responsividad */
-@media (max-width: 1024px) {
-    .contenedorAsignatura {
-        width: 95%;
-    }
-
-    .centrarBtn {
-        width: 50%; // Más ancho en tabletas
-    }
-}
-
-@media (max-width: 768px) {
-    .contenedorAsignatura {
-        width: 100%;
-    }
-
-    .centrarBtn {
-        width: 70%; // Botón más grande en móviles
-    }
-
-    h3, h5 {
-        font-size: 1.5rem; // Reduce el tamaño del texto
-    }
-}
-
-@media (max-width: 480px) {
-    .centrarBtn {
-        width: 90%;
-        height: 50px; // Más alto para ser más fácil de tocar en móviles
-    }
-}

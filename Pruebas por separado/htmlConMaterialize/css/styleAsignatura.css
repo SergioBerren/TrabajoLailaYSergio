@@ -1,4 +1,3 @@
-@charset "UTF-8";
 header {
   background-color: #9BB3B8;
   padding: 1rem;
@@ -73,7 +72,13 @@ header .logo {
   }
 }
 
-/* Estilo para el contenedor principal */
+body {
+  background-image: url("../img/estrellitas.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
 .contenedorAsignatura {
   margin: 20px;
   display: flex;
@@ -83,22 +88,18 @@ header .logo {
   max-width: 1200px;
   margin: auto;
 }
-
-/* Calendario */
-.calendario {
+.contenedorAsignatura h3,
+.contenedorAsignatura h5 {
+  color: white;
+  font-weight: bold;
+  font-family: "sans-serif";
+}
+.contenedorAsignatura .calendario {
   width: 100%;
   margin-top: 20px;
   max-width: 800px;
 }
-
-h3, h5 {
-  color: #FFFFFF;
-  font-weight: bold;
-  font-family: "sans-serif";
-}
-
-/* Botón centrado */
-.centrarBtn {
+.contenedorAsignatura .centrarBtn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -107,26 +108,14 @@ h3, h5 {
   min-width: 150px;
   height: 40px;
 }
-
-/* Links */
-a {
-  color: black;
+.contenedorAsignatura a {
+  color: rgb(255, 255, 255);
 }
-
-/* Fondo responsive */
-body {
-  background-image: url("../img/estrellitas.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-}
-
-/* Responsividad */
 @media (max-width: 1024px) {
   .contenedorAsignatura {
     width: 95%;
   }
-  .centrarBtn {
+  .contenedorAsignatura .centrarBtn {
     width: 50%;
   }
 }
@@ -134,19 +123,22 @@ body {
   .contenedorAsignatura {
     width: 100%;
   }
-  .centrarBtn {
+  .contenedorAsignatura .centrarBtn {
     width: 70%;
   }
-  h3, h5 {
+  .contenedorAsignatura h3,
+  .contenedorAsignatura h5 {
     font-size: 1.5rem;
   }
 }
 @media (max-width: 480px) {
-  .centrarBtn {
+  .contenedorAsignatura .centrarBtn {
     width: 90%;
     height: 50px;
   }
 }
+
+/* Responsividad */
 footer {
   display: flex;
   justify-content: center;
