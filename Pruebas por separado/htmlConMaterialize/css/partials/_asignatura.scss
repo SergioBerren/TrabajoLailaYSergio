@@ -6,7 +6,9 @@ body {
     background-size: cover;
     background-attachment: fixed; // mantiene la imagen fija al hacer scroll
 }
-
+#titulo{ 
+    color:$blanco ;
+}
 .contenedorAsignatura {
     margin: 20px;
     display: flex;

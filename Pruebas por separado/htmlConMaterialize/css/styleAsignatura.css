@@ -79,6 +79,10 @@ body {
   background-attachment: fixed;
 }
 
+#titulo {
+  color: #FFFFFF;
+}
+
 .contenedorAsignatura {
   margin: 20px;
   display: flex;
