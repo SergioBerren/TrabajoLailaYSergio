@@ -1,16 +1,10 @@
 @import '../Comun/variables';
 @import '../partials/styleEstrellitas';
 
-html, body {
+body {
     overflow-y: hidden;
     height: 100%;
     width: 100%;
-}
-
-.cabecera {
-    position: sticky;
-    top: 0;
-    z-index: 1000; 
 }
 
 .noticia {
@@ -37,9 +31,6 @@ html, body {
     height: 100%;
     overflow-y: auto;
     scrollbar-width: none;
-}
-
-.menuLateral {
     h3 {
     color: $azulOscuroModoNoche;
     margin-bottom: 15px;
@@ -69,21 +60,23 @@ p {
         color: $azulOscuroModoNoche;
         margin-bottom: 20px;
     }
+    .card-image img {
+        width: 100%;
+        height: 150px; 
+        object-fit: cover; 
+        border-radius: 5px; 
+    }
+    .borde {
+        border: 2px solid #000000;
+        background-color: $blanco;
+        border-radius: 5%;
+    }
 }
 
-.card-image img {
-    width: 100%; /* Ocupa todo el ancho disponible */
-    height: 150px; /* Ajusta la altura según tu preferencia */
-    object-fit: cover; /* Recorta la imagen para llenar el espacio sin deformarla */
-    border-radius: 5px; /* Opcional: esquinas redondeadas */
-}
 
-.borde {
-    border: 2px solid #000000;
-    background-color: $blanco;
-    border-radius: 5%;
-}
+
+
 
 .row {
-    margin-bottom: 20px; // Espacio entre filas
+    margin-bottom: 20px; 
 }
