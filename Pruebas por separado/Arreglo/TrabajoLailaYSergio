@@ -1,1 +1,0 @@
-En menuLateral puedes poner un overflow-y: auto; para implementar el scroll, si junto a eso ponemos un height, podemos hacer un overflow: hidden; y un height: 100% para que no se pueda scrollear el div grande
