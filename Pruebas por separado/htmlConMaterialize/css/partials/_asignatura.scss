@@ -55,12 +55,9 @@ body {
 
     @media (max-width: 768px) {
         width: 100%;
-
-
         .centrarBtn {
             width: 70%; // botón más grande en móviles
         }
-
         h3,
         h5 {
             font-size: 1.5rem; // reduce el tamaño del texto
